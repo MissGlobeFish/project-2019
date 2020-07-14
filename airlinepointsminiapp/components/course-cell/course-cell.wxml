@@ -1,0 +1,27 @@
+<!-- 创建组件 -->
+<wxs module="courseWxs" src="../../wxParse/filter.wxs"></wxs>
+<view class="course-cell" wx:for="{{courseList}}" wx:key="{{index}}">
+  <navigator url="../../pages/details/details?id={{item.lessonId}}" hover-class="none"> 
+    <view class="top">
+      <view class="pic-wrap">
+        <image src="{{item.titlePageImg}}" mode="aspectFill"></image>
+        <view class="sub-icon color-3}}">{{item.courseName}}</view>
+      </view>
+      <view class="info-wrap">
+        <view class="right-top">
+          <view class="info-item info-sub">
+            {{item.title }}
+          </view>
+          <!-- <view class="info-item item-text">
+            <image src="../../images/icon/teacher-icon.png" class="icon-pic"></image>
+            <text class="font-24">{{item.tnames}}</text>
+          </view> -->
+        </view>
+        <view class="right-bottom">
+          <view class="price"><text class="price-sub">¥</text>999积分</view>
+          <!-- <button class="btn">查看</button> -->
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>

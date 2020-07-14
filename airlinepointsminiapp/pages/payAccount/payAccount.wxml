@@ -1,0 +1,109 @@
+<!--pages/payAccount/payAccount.wxml 结算页面-->
+<wxs module="courseWxs" src="../../wxParse/filter.wxs"></wxs>
+<view class="container">
+  <block>
+    <view class="course-cell">
+      <view class="pic-wrap">
+        <image wx:if="{{goodsInfo.titlePageImg}}" src="{{fileBaseUrl+goodsInfo.titlePageImg}}"  mode="aspectFill"></image>
+        <view class="sub-icon color-3}}">{{goodsInfo.courseName}}</view>
+      </view>
+      <view class="info-wrap">
+        <view class="right-top">
+          <view class="info-item info-sub">
+            <!-- <text class="sub-icon  {{item.courseType == 'C2'? 'color-1':''}}">{{courseWxs.courseType(item.courseType)}}</text> -->
+            {{goodsInfo.title }}
+          </view>
+          <view class="info-item item-text">
+            <image src="../../images/icon/time-icon.png" class="icon-pic"></image>
+            {{goodsInfo.courseDate}} {{goodsInfo.courseStartTime}}-{{goodsInfo.courseEndTime}}
+          </view>
+        </view>
+        <view class="right-bottom">
+          <view class="price fc-1"><text class="price-sub">¥</text>{{goodsInfo.currentPrice}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class="module-wrap">
+      <view class="module-title"><text class="font-32 title">报名信息</text></view> 
+      <view class="input-item">
+        <text>姓名: {{infoData.name}}</text>
+      </view>
+      <view class="input-item">
+        <text>电话: {{infoData.phoneNum}}</text>
+      </view>
+    </view>
+
+    <view class="module-wrap">
+      <view class="module-title"><text class="font-32 title">价格清单</text></view> 
+      <view class="input-item">
+        <text>{{goodsInfo.courseType == "C1" ? '课程' : '活动'}}价格:</text><text> ¥{{goodsInfo.currentPrice}}</text>
+      </view>
+      <view class="input-item">
+        <text>朋友推荐优惠:</text><text class="{{true?'disable-text':'fc-1'}}">不可与优惠券共用</text>
+      </view>
+      <view class="input-item" wx:if="{{memberName}}">
+        <text>{{memberName}}:</text><text wx:if="{{mebReducePrice>0}}" class="{{true?'disable-text':'fc-1'}}">-¥{{mebReducePrice}}</text>
+      </view>
+      <view class="input-item"  bindtap='handelCard'>
+        <text class="discount">优惠券</text><text class="discount-price {{ticketUsedNum<1?'disable-text':'fc-1'}}">{{reducePrice>=0 ? '-¥'+reducePrice:ticketDesc}}</text>
+      </view>
+    </view>
+  </block> 
+   <block>
+    <view class="footer-bottom" hover-class="none" >
+      <view class="footer-left"><text>实付:</text ><text class="fc-1 pay-icon">¥<text style="margin-left: 10rpx">{{actualPayPrice}}</text>  </text></view>
+      <view class="footer-right font-32" bindtap="wxPay">
+        微信支付
+      </view>
+    </view>
+  </block>
+   <!-- <block>
+    <view class="information-top">
+      <view class="pic-wrap">
+        <image src="{{fileBaseUrl+goodsInfo.titlePageImg}}"></image>
+      </view>
+      <view class="info-wrap">
+        <view class="info-item info-sub">
+          <text class="sub-title">{{goodsInfo.courseName}}</text>  
+        </view>
+        <view class="info-item"><text>{{goodsInfo.courseType == "C1" ? '课程' : '活动'}}时间:{{goodsInfo.courseDate}} {{goodsInfo.courseStartTime}}-{{goodsInfo.courseEndTime}}</text></view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class="module-wrap">
+      <view class="module-title"><text class="font-32 title">报名信息</text></view> 
+      <view class="input-item">
+        <text>姓名: {{infoData.name}}</text>
+      </view>
+      <view class="input-item">
+        <text>电话: {{infoData.phoneNum}}</text>
+      </view>
+    </view>
+
+      <view class="module-wrap">
+        <view class="module-title"><text class="font-32 title">价格清单</text></view> 
+        <view class="input-item">
+          <text>{{goodsInfo.courseType == "C1" ? '课程' : '活动'}}价格</text><text> ¥{{goodsInfo.currentPrice}}</text>
+        </view>
+        <view class="input-item">
+
+          <text>朋友推荐优惠</text><text class="{{true?'disable-text':'fc-1'}}">不可与优惠券共用</text>
+        </view>
+        <view class="input-item"  bindtap='handelCard'>
+
+          <text class="discount">优惠券</text><text class="discount-price {{ticketUsedNum<1?'disable-text':'fc-1'}}">{{reducePrice>=0 ? '-¥'+reducePrice:ticketDesc}}</text>
+        </view>
+      </view>
+  </block> 
+  <block>
+    <view class="footer-bottom" hover-class="none" >
+      <view class="footer-left"><text>实付:</text ><text class="fc-1">¥{{actualPayPrice}}</text>  </view>
+      <view class="footer-right font-32" bindtap="wxPay">
+        微信支付
+      </view>
+    </view>
+  </block> -->
+</view>

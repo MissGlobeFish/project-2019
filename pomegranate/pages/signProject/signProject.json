@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "sign-cell": "/components/sign-cell/sign-cell",
+    "segmentedBar": "/components/common/segmentedBar/segmentedBar"
+    
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "课程活动"
+}

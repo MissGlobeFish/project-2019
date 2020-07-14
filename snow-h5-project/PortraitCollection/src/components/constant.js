@@ -1,0 +1,1 @@
+global.ERP_BASE_URL = process.env.ERP_API_URL

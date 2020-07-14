@@ -1,0 +1,23 @@
+/* components/swiper-component/swiper-component.wxss */
+.slide-image {
+  border-radius: 10px;
+  width: 606rpx;
+  height: 100%;
+  margin:auto;
+}
+.dot-wrap {
+  position: absolute;
+  bottom: 10rpx;
+  right: 92rpx;
+}
+.dot-item {
+  width: 20rpx;
+  height: 20rpx;
+  float: left;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  background: rgba(255,255,255,.3)
+}
+.active-color {
+  background-color: #fff
+}

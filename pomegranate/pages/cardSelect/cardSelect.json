@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ticketTemplate": "/components/ticketTemplate/ticketTemplate"
+  },
+  "navigationBarTitleText": "选择优惠券"
+}

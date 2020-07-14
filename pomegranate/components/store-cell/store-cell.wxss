@@ -1,0 +1,94 @@
+/* components/store-cell/store-cell.wxss */
+.cellContainer {
+    background-color: #fff;
+    min-height: 410rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20rpx;
+    box-shadow:0px 2px 14px 0px rgba(0,0,0,0.13);
+    position: relative;
+}
+  /* 普通商品 */
+
+.cellImage {
+    width: 345rpx;
+    height: 345rpx;
+    background-color: #fff
+}
+/* 卡 */
+.cardBox {
+    width: 345rpx;
+    height: 345rpx;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.cardImage {
+    width: 63.7%;
+    height: 63.7%;
+}
+
+.cellTitle {
+    margin-top: 20rpx;
+    padding-left: 20rpx;
+    padding-right: 10rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #353535;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.priceNumberBox {
+    width: 100%;
+    padding-left: 20rpx;
+    margin-top: 16rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.priceNumber {
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,61,75,1);
+    /* font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #353535; */
+}
+.priceUnit {
+    font-size:12px;
+    font-family:PingFangSC-Regular;
+    color:rgba(128,128,128,1);
+    margin-left: 6rpx;
+}
+
+.numberBox {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20rpx;
+}
+.numberLabel {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #353535;
+    text-align: center;
+    line-height: 44rpx;
+    min-width: 45rpx;
+}
+.numberButton {
+    background-color: transparent;
+    line-height: 1;
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+    display:flex;
+    align-items:center;
+}
+.btnImage {
+    width: 36rpx;
+    height: 36rpx;
+}

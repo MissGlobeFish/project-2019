@@ -1,0 +1,16 @@
+<!-- pages/loginPage/loginPage.wxml -->
+<view wx:if="{{!userInfo}}" class="container" hover-class="none" hover-stop-propagation="false">
+    <image class="loginLogo" src="/images/icon/login_ShiLiuLogo.png" mode="aspectFit"></image>
+    <button class='loginBtn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+        微信登录
+    </button>
+    <view wx:else>请升级微信版本</view>
+</view>
+<view wx:else class="container">
+    <view class="inputTitle">请输入手机号</view>
+    <form-input placeholder='手机号' type="number" erorrStyle="{{errorStaut}}" maxlength="{{11}}" name="tel" bind:inputValueDidChange="onGetValue" sendCode="{{true}}" bind:toPhone="onGetPhone" sendCodeObj="{{sendCodeObj}}"></form-input>
+    <form-input placeholder='验证码' erorrStyle="{{errorStaut}}" maxlength="{{4}}" bind:inputValueDidChange="onGetVerifyCode"></form-input>
+    <button class="submitBtn {{hasVerify ? 'submitBtnOk' : 'submitBtnDisabled'}}" style="color:rgba(255,255,255,1);" disabled="{{!hasVerify}}" bind:tap="submit">
+        下一步
+    </button>
+</view>

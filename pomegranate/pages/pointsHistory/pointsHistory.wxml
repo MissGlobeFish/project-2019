@@ -1,0 +1,20 @@
+<!-- pages/pointsHistory.wxml -->
+<view class="backBox">
+    <!-- 当前研值 -->
+    <view class="headerBackBox">
+        <text class="pointTitleLab">当前研值</text>
+        <text class="pointLab">{{points}}</text>
+        <image class="headerBackImage"  mode="scaleToFill" src="/images/icon/pointHistory-back.png" />      
+    </view>
+    <!-- 表头 -->
+    <view class="listHeader">
+        <text class="listHeaderName">研值记录</text>
+        <button class="listHeaderBtn" hover-class="btn-hover" bindtap="pointRuleBtnDidTapped">研值规则</button>
+    </view>
+    <!-- 列表 -->
+    <view wx:for="{{pointsHistoryData}}" wx:key="{{index}}" class="cells" data-index="{{index}}">
+        <text class="cellText">{{pointsHistoryData[index].scoreProject}}</text>
+        <text class="cellText">{{pointsHistoryData[index].score}}</text>
+    </view>
+</view>
+<view class="lastText">{{ !pointsHistoryData ? '加载中...' : pointsHistoryData.length == 0 ? '暂无记录' : '只有这么多了'  }}</view>

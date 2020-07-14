@@ -1,0 +1,57 @@
+<!--pages/myInfo/myInfo.wxml 个人信息-->
+<view class="container">
+
+    <view wx:if="{{isShowInfo}}" class="null-data">
+      <image src="../../images/icon/null-icon.png"></image>
+      <text class="msg">还没有个人信息哦</text>
+     <!-- <navigator url="/pages/myInfo/myInfo" hover-class='none'></navigator> -->
+     <button class="btn" bindtap='handleData'>立即填写        </button>
+    </view>
+    <view class="information-bottom" wx:else>
+      <!-- <view class="title font-32">请填写报名信息</view> -->
+
+        <form bindsubmit="formSubmit">
+          <form-input 
+            placeholder='姓名' focus="{{true}}"  
+            bind:toParent="onGetValue" name="name" 
+            erorrStyle="{{errorStatus.name}}"
+            bind:toParent = "onGetValue"
+            value="{{infoData.name}}"
+            disabled="{{true}}"
+            ></form-input>
+          <form-input 
+            placeholder='手机' type="number" 
+            maxlength= "{{11}}" name="phoneNum"  
+            bind:toParent = "onGetValue"
+            value="{{infoData.phoneNum}}"
+            erorrStyle="{{errorStatus.phoneNum}}"></form-input>
+          <form-input
+            placeholder='行业' 
+            name="business"  
+            bind:toParent = "onGetValue"
+            value="{{infoData.business}}"
+            erorrStyle="{{errorStatus.business}}"></form-input>
+          <form-input
+            placeholder='公司名称' 
+            name="company"  
+            bind:toParent = "onGetValue"
+            value="{{infoData.company}}"
+            erorrStyle="{{errorStatus.company}}"></form-input>
+          <form-input 
+            placeholder='职位'
+            name="post"
+            value="{{infoData.post}}"
+            bind:toParent = "onGetValue" 
+            erorrStyle="{{errorStatus.post}}" borderNone="{{true}}"></form-input>
+          <!-- <view class="input-item {{errorStatus.name ? 'errorStyle' : ''}}">
+            <input placeholder="姓名" name="name"/>
+          </view>-->
+          <!-- disabled="{{!validCheck}}"  {{validCheck ? 'color-3' : 'color-2' }}-->
+          <view class="pay-account fix-bottom-btn">
+            <button  form-type="submit" class="btn font-32 "  hover-class="none">修改</button>
+          </view>
+        </form>
+        
+      
+    </view>
+</view>

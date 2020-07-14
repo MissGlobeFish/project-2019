@@ -1,0 +1,45 @@
+<!--pages/points/ranking/ranking.wxml-->
+<view class="container">
+  <view class="switch-tab">
+    <segmented-bar position="aroundContainer"titles="{{['积分排名','奖扣排名']}}"></segmented-bar>
+  </view>
+  <view class="content">
+    <view class="date text-center">
+      <text data-type="start" bindtap="showDateDialog">{{startSelectDate || 12313}}</text> - <text data-type="end"  bindtap="showDateDialog">{{endSelectDate }}</text>
+    </view>
+    <view class="content-list">
+        
+      <view class="list-head">
+        <view>排名</view>
+        <view class="user">员工</view>
+        <view>奖分</view>
+        <view class=" text-right">扣分</view>
+      </view>
+      <view class="list-item" wx:for = "{{listData}}" wx:key="{{key}}">
+        <view>{{item.rankNum}}</view>
+        <view class="user"><image class="user-img" src="../../../images/avatar.png"></image><text>{{item.userName}}</text></view>
+        <view class="up-score">{{item.upScore}}</view>
+        <view class="down-score text-right">{{item.downScore}}</view>
+      </view>
+    </view>
+      
+  </view>
+
+
+  
+  <!-- 时间选择器 -->
+  <van-popup 
+    show="{{ showDateDialog }}" 
+    bind:close="onCloseDateDialog"
+    position="bottom"
+    >
+    <van-datetime-picker
+      type="date"
+      value="{{ startPickDate }}"
+      min-date="{{ minDate }}"
+      formatter="{{ formatter }}"
+      bind:confirm="confirmDate"
+    />
+  </van-popup>
+</view>
+  

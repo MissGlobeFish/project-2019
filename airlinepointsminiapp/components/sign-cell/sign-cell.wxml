@@ -1,0 +1,36 @@
+<!--components/sign-cell/sign-cell.wxml-->
+<wxs module="courseWxs" src="../../wxParse/filter.wxs"></wxs>
+<view class="course-cell" wx:for="{{list}}" wx:key="{{index}}"  bindtap="signTap" data-id="{{item.sid}}">
+  <view class="top">
+    <view class="pic-wrap">
+      <image src="{{fileBaseUrl+item.titlePageImg}}"  mode="aspectFill"></image>
+      <!-- <view class="sub-icon {{item.courseType == 'C2'? 'color-1':'color-3'}}">{{courseWxs.courseType(item.courseType)}}</view> -->
+      <view class="sub-icon color-3}}">{{item.courseName}}</view>
+    </view>
+    <view class="info-wrap">
+      <view class="right-top">
+        <view class="info-item info-sub">
+          <!-- <text class="sub-icon  {{item.courseType == 'C2'? 'color-1':''}}">{{courseWxs.courseType(item.courseType)}}</text> -->
+          {{item.title}}
+        </view>
+        <view class="info-item item-text">
+          <image src="../../images/icon/time-icon.png" class="icon-pic"></image>
+          {{item.courseDate}} {{item.courseStartTime}}-{{item.courseEndTime}}
+          <view class="course-status">{{courseWxs.signStatus(item.orderStatus)}}</view>
+        </view>
+        <view class="info-item item-text">
+          <image src="../../images/icon/map-icon-1.png" class="icon-pic"></image>
+          {{item.addr}}
+        </view>
+      </view>
+      <view class="right-bottom" wx:if="{{item.orderStatus=='WAIT_PAY' && showPay== true}}" >
+        <button hover-class='none' class="btn" data-content = "{{item}}" catchtap="goPay">未支付</button>
+      </view>
+      
+      <view class="right-bottom" wx:if="{{isShowRemark && item.orderStatus == 'OK'}}" data-judge = "{{item.judge}}" >
+        <button hover-class='none' class="btn" data-sid="{{item.sid}}" catchtap="remarkEvent">{{item.judge == true ? '查看评价' : '评价'}}</button>
+      </view>
+    </view>
+  </view>
+</view>
+  

@@ -1,0 +1,48 @@
+/* components/swiper-component/swiper-component.wxss */
+.swiper-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.slide-image {
+  border-radius: 5px;
+  /* width: 700rpx; */
+  height: 100%;
+  margin:auto 30rpx;
+  /* transform: scale(0.9);
+  transition: all 0.3s ease; */
+  width: 100%;
+}
+.dot-wrap {
+  position: absolute;
+  bottom: 10rpx;
+  right: 92rpx;
+}
+.dot-item {
+  width: 20rpx;
+  height: 20rpx;
+  float: left;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  background: rgba(255,255,255,.3)
+}
+.active-color {
+  background-color: #fff
+}
+.active-img {
+  transform: scale(1);
+}
+
+/* swiper {
+  padding-top: 30px;
+ }
+ .le-img {
+  width: 100%;
+  display: block;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  border-radius: 6px;
+ }
+ .le-img.le-active {
+  transform: scale(1);
+ } */

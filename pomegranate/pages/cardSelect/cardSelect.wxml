@@ -1,0 +1,17 @@
+<!--选择使用优惠券-->
+<view class="container">
+  <scroll-view class="scroll-container"  scroll-y style="height:{{windowHeight-50}}px">
+    <!-- <view class="item" wx:for="{{ticketUsed}}" wx:key="{{index}}" bindtap="handleClick" data-index="{{index}}" data-value="{{item}}">
+      <image src="{{fileBaseUrl+item.fileUrl}}" class="item-img"></image>
+      <view class="item-text"> <text>{{item.ticketName}}</text></view>
+      <view class="selectIcon" wx:if="{{item.ticketId == ticketSelect.ticketId}}"><view class="rightIcon"></view></view>
+    </view> -->
+    <view class="item" wx:for="{{ticketUsed}}" wx:key="{{index}}" bindtap="handleClick" data-index="{{index}}" data-value="{{item}}">
+      <!-- 优惠券 -->
+      <ticketTemplate class="cellImage" ticketType='{{item.ticketType}}' ticketNumber='{{item.ticketPrice}}'></ticketTemplate>
+      <view class="item-text"><text class="font-32">{{item.ticketName}}</text></view>
+      <view class="selectIcon" wx:if="{{item.ticketId == ticketSelect.ticketId}}"><view class="rightIcon"></view></view>
+    </view>
+  </scroll-view>
+  <view class="footer"><button class="font-32" hover-class='none' bindtap="handleClearTicket">不使用优惠券</button></view>
+</view>

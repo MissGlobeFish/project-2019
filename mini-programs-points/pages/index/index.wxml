@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="banner">
+    <swiper imgList="{{imgList}}"></swiper>
+  </view>
+
+  <view class="news-list-wrap">
+    <view class="news-list-item" wx:for="{{listData}}" wx:key="{{index}}">
+      <news-item-compontent data-item = "{{item}}" item="{{item}}" bindtap="goDetail"></news-item-compontent>
+    </view>
+  </view>
+</view>

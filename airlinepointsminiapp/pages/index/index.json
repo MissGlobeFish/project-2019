@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "course-cell": "/components/course-cell/course-cell",
+    "swiper-item": "/components/swiper-component/swiper-component"
+  },
+  "navigationBarTitleText": "积分商城",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

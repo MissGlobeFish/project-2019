@@ -1,0 +1,43 @@
+/* pages/remark/remark.wxss */
+.module {
+  padding: 30rpx 40rpx;
+  background: #fff;
+}
+.remark-wrap {
+  margin-top: 20rpx;
+}
+.sub-text {
+  font-size: 32rpx;
+  color: #888;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  padding-bottom: 50rpx;
+}
+.textarea {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+.textarea textarea {
+  width: auto;
+  height: 230rpx;
+  background-color: #f4f4f4;
+  padding: 7px;
+}
+
+.footer-btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+ 
+}
+.footer-btn>button {
+  height: 100rpx;
+  background: linear-gradient(to right,#FF3F3F,#FD6161);
+  text-align: center;
+  color: #fff;
+  line-height: 100rpx;
+}

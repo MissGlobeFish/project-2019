@@ -1,0 +1,38 @@
+<!--components/card-cell/card-cell.wxml-->
+<view style="background-color: #fff; padding-left: 20rpx; padding-right: 20rpx;" hover-class="none" hover-stop-propagation="false">
+  <view class="card-container" wx:for="{{ticketList}}" wx:key="{index}">
+    <!-- <view class="pic-wrap"> -->
+      <ticketTemp class="cellImage" propTicketTitleBox="propTicketTitleBox" ticketType='{{item.ticketType}}' ticketNumber='{{item.ticketPrice}}'></ticketTemp>
+    <!-- </view> -->
+
+    <view class="right-wrap">
+      <view class="title">
+        <view class="sub-title">{{item.ticketName}}</view>
+        <button open-type="share" hover-class='none' class="card-pwd" data-ticketInfo="{{item}}" bindtap="ticketFree">赠送</button>
+      </view>
+      <view class="desc">
+        <!-- {{desc}} -->
+        该产品为石榴研习院专用，使用范围的最终解释权归石榴研习院所有
+      </view>
+      <!-- 弹框 -->
+      <!-- <my-modal id="myModal" confirmText="复制" bind:toParentConfirm="handleConfirm" bind:toParentCancle="handleCancle">
+        <view class="modal-content"><view class="modal-text">卡密：KL564143258</view></view>
+      </my-modal>
+      <my-modal id="ticketFreeModal" confirmText="赠送" bind:toParentConfirm="handleConfirm" bind:toParentCancle="handleCancle" showFooter="{{showFooter}}">
+        <view class="modal-ticketfree" wx:if="{{!item.messageStatus}}">
+          <view class="modal-title">赠送</view>
+          <view class="modal-input">
+            <input placeholder='请输入对方用户ID' cursor-spacing="100"></input>
+            <view class="error-msg"><text  wx:if="{{true}}">*请填写正确的ID</text></view>
+          </view>
+        </view>
+        <view class="message-modal" wx:else>
+          <image src="{{item.messageUrl.successUrl}}"></image>
+          <view><text>{{item.messageText}}</text> </view> 
+        </view>
+      </my-modal> -->
+    </view>
+  </view>
+</view>
+
+

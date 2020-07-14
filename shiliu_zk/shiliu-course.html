@@ -1,0 +1,634 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>石榴商学院</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media (min-width: 576px){
+            .my-tabs {
+                max-width: 540px;
+            }
+        }
+        @media (min-width: 768px){
+            .my-tabs {
+                max-width: 720px;
+            }
+        }
+        @media (min-width: 992px){
+            .my-tabs {
+                max-width: 960px;
+            }
+        }
+        @media (min-width: 1200px){
+            .my-tabs {
+                max-width: 1140px;
+            }
+        }
+        @media only screen and (max-width: 767px){
+            .section-heading .testimonial-thumb, .section-heading h5{
+                text-align: center !important;
+            }
+            .contact-information .single-contact-info{
+                display: none !important;
+            }
+            .contact-content .contact-form-area{
+                margin-top: 0;
+            }
+            .single-testimonial-area{
+                border-bottom: 1px solid #fff !important;
+                padding-bottom: 30px !important;
+                margin: 0 !important;
+                margin-bottom: 40px !important;
+            }
+            .single-testimonial-area .testimonial-thumb{
+                display: none;
+            }
+            .my-datas {
+                display: none;
+            }
+            .my-btn{
+                text-align: center !important;
+            }
+            .flexBox .form-group{
+                width: 100% !important;
+                margin-bottom: 10px;
+            }
+            .radioBox .radio{
+                width: 100% !important;
+                text-align: center;
+            }
+        }
+        .my-tabs{
+            width: 100%;
+            padding-top: 150px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .my-tabs li{
+            width: 100px;
+            height: 50px;
+            background: #FFF;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #EEF3F6;
+            border-bottom: none;
+            margin-right: 10px;
+        }
+        .my-tabs li a{
+            color: #FF3D4B;
+        }
+        .my-tabs li:hover{
+            background: #FF3D4B;
+            cursor: pointer;
+        }
+        .my-tabs li:hover a{
+            color: #FFF;
+        }
+        .contact-content{
+            position: relative;
+            z-index: none;
+            top: 0;
+            margin-bottom: 0;
+        }
+        .my-saying{
+            background: #EEF3F6;
+            margin-top: 5px;
+            padding: 50px 0;
+        }
+        .single-testimonial-area .testimonial-content h5,
+        .single-testimonial-area .testimonial-content p,
+        .single-testimonial-area .testimonial-content span,
+        .single-testimonial-area .testimonial-content h6{
+            color: #242424;
+        }
+        .informationBox{
+            width: 100%;
+        }
+        .flexBox, .radioBox{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .flexBox .form-group{
+            width: 30%;
+        }
+        .flexBox .form-group input{
+            width: 100%;
+        }
+        .radioBox .radio{
+            width: 30%;
+            height: 38px;
+            line-height: 38px;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            margin-bottom: 20px;
+        }
+        .radioBox .radio:hover{
+            cursor: pointer;
+        }
+        .radioBox .radio input{
+            margin-right: 10px;
+        }
+        .dataBox{
+            border: 1px solid #ced4da;
+        }
+        #dataBank .my-datas{
+            width: 80%;
+            margin-right: 10px;
+            background: url(img/blog-img/1.jpg)  no-repeat center 0;
+            background-size: 100% 100%;
+        }
+        .my-btn{
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+    </div>
+    <div class="headerpage"></div>
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+        <div class="bradcumbContent">
+            <h2>石榴商学院</h2>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <ul class="nav nav-tabs my-tabs" id="myTab"> 
+        <li class="active"><a href="#tutorOnline">导师在线</a></li> 
+        <li><a href="#dataBank">资料库</a></li> 
+        <li><a href="#commercial">商业测评</a></li> 
+    </ul> 
+        
+    <div class="tab-content" style="margin-top:50px;"> 
+        <div class="tab-pane active" id="tutorOnline">
+            <!-- ##### 导师在线Start ##### -->
+            <section class="contact-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="contact-content">
+                                <div class="row">
+                                    <!-- Contact Information -->
+                                    <div class="col-12 col-lg-5">
+                                        <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
+                                            <div class="section-heading text-left">
+                                                <div class="testimonial-thumb">
+                                                    <img src="img/bg-img/t1.jpg" alt="" style="border-radius: 50%;">
+                                                </div>
+                                                <br>
+                                                <h5>河豚小姐&河豚小姐</h5>
+                                            </div>
+        
+                                            <!-- Single Contact Info -->
+                                            <div class="single-contact-info d-flex">
+                                                <div class="contact-icon mr-15">
+                                                    <i class="icon-placeholder"></i>
+                                                </div>
+                                                <p>4127/ 5B-C Mislane Road,<br> Gibraltar, UK</p>
+                                            </div>
+        
+                                            <!-- Single Contact Info -->
+                                            <div class="single-contact-info d-flex">
+                                                <div class="contact-icon mr-15">
+                                                    <i class="icon-telephone-1"></i>
+                                                </div>
+                                                <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
+                                            </div>
+        
+                                            <!-- Single Contact Info -->
+                                            <div class="single-contact-info d-flex">
+                                                <div class="contact-icon mr-15">
+                                                    <i class="icon-contract"></i>
+                                                </div>
+                                                <p>office@yourbusiness.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Contact Form Area -->
+                                    <div class="col-12 col-lg-7">
+                                        <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
+                                            <form class="my-btn" action="#" method="post">
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="请留下你想问的问题..."></textarea>
+                                                <button class="btn academy-btn mt-30" type="submit">提问讲师</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <!-- ##### 问答语录Start ##### -->
+                    <div class="testimonials-area section-padding-100 bg-img my-saying" style="background: #EEF3F6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                                    <span>our testimonials</span>
+                                    <h3>问答精彩语录</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Single Testimonials Area -->
+                                <div class="col-12 col-md-6">
+                                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
+                                        <div class="testimonial-thumb">
+                                            <img src="img/bg-img/t1.jpg" alt="">
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <h5>青天</h5>
+                                            <p>首先是自律。我认为无论是投资还是其他行业，自律都是十分重要的，无论如何强调都不过分。自律意味着你能够控制自己的情绪和行动，当你做出了一个投资决定，就一定要向着目标前进，这个过程会遇到很多困难，一定要自我约束才能实现。其次，是对风险的把控能力。风险意味着不确定性，但我们需要知道哪些风险是我们能够承受的，哪些是无法承受的，有的时候一个项目的收益取决于很多因素，但风险是能够提前判断的，介入一个不在自己风险承受范围内的项目，并不是一个明智的选择。</p>
+                                            <h6><span>河豚小姐,</span> Student</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Testimonials Area -->
+                                <div class="col-12 col-md-6">
+                                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
+                                        <div class="testimonial-thumb">
+                                            <img src="img/bg-img/t2.jpg" alt="">
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <h5>张子豪</h5>
+                                            <p>除了为企业家提供必要的资金支持外，投资人还可以起到很多作用。比如，提供一些法律与财务上的指导，避免企业家在创业过程中可能会犯的一些低级错误，这样也能让企业家专注在企业的发展上面。一位有经验的投资人能够在股权结构、法律结构、团队构建等很多方面为企业带来帮助，因为很多企业在早期创业阶段是找不到，甚至可以说请不起这样的专业人士的，所以选择一位合适的投资人同时也相当于获得了一位经验丰富的高级顾问，这对创业企业是十分必要而且划算的。</p>
+                                            <h6><span>采蘑菇的曹小姐,</span> Student</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Testimonials Area -->
+                                <div class="col-12 col-md-6">
+                                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
+                                        <div class="testimonial-thumb">
+                                            <img src="img/bg-img/t3.jpg" alt="">
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <h5>代阳</h5>
+                                            <p>认为这些管理体系不适合中国国情，不适合国内企业，但是进入当前经济下行、机会市场逐渐走向竞争市场的时候，才发现，提升企业的管理能力是企业发展的根本动力，靠个人能力的时代已经过去，事实已经证明，成功的企业都是管理体系发达、各项管理措施落实到位的企业。</p>
+                                            <h6><span>小西瓜,</span> Student</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Testimonials Area -->
+                                <div class="col-12 col-md-6">
+                                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="700ms">
+                                        <div class="testimonial-thumb">
+                                            <img src="img/bg-img/t4.jpg" alt="">
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <h5>王晶</h5>
+                                            <p>体系建设是个非正式的说法，一般指管理体系的建设，对于企业来说，而管理体系是其中一部分，虽然很重要，但不是企业的全部。 管理体系有很多种，比如全面质量管理体系（ISO9000系列）、人力资源管理体系、财务管理体系、全面风险管理体系、内控管理体系等等，这些都是手段，为保障企业达成经营目标的管理手段，是企业管理的重要抓手，企业的很多有形无形的东西都融入在各种管理体系中。</p>
+                                            <h6><span>痴笑,</span> Student</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
+                                        <!-- <a href="#" class="btn academy-btn">查看更多</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##### 问答语录End ##### -->
+                </div>
+            </section>                  
+            <!-- ##### 导师在线End ##### -->
+        </div> 
+        <div class="tab-pane" id="dataBank">
+            <!-- ##### 资料库Start ##### -->
+            <section class="contact-area">
+                <div class="container" style="margin-bottom:50px;">
+                    <!-- ##### 问答语录Start ##### -->
+                    <div class="testimonials-area section-padding-100 bg-img my-saying" style="background: #EEF3F6">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                                        <span>our testimonials</span>
+                                        <h3>石榴智库资料下载</h3>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="single-blog-post mb-50 wow fadeInUp dataBox" data-wow-delay="300ms">
+                                        <div style="display: flex;justify-content: space-between;">
+                                            <div class="blog-post-thumb my-datas"></div>
+                                            <div>
+                                                <a href="#" class="post-title">新能源汽车系列深度报告动力锂电池篇：大浪淘沙，动力锂电池洗牌开局</a>
+                                                <div class="post-meta">
+                                                    <p>发布时间 | <a href="#">2017-11-20 10:03:22</a> | <a href="#">3 comments</a></p>
+                                                </div>
+                                                <p>概要：经历 14-15 年新能源汽车市场的高速增长，国内对动力锂电池需求空前旺盛，在此背景下，国内企业蜂拥而上大幅度扩张锂电池产能，致市场面临产品质量鱼。</p>
+                                                <div class="my-btn">
+                                                    <button class="btn academy-btn mt-30" type="submit">点击下载</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="single-blog-post mb-50 wow fadeInUp dataBox" data-wow-delay="300ms">
+                                        <div style="display: flex;justify-content: space-between;">
+                                            <div class="blog-post-thumb my-datas"></div>
+                                            <div>
+                                                <a href="#" class="post-title">新能源汽车系列深度报告动力锂电池篇：大浪淘沙，动力锂电池洗牌开局</a>
+                                                <div class="post-meta">
+                                                    <p>发布时间 | <a href="#">2017-11-20 10:03:22</a> | <a href="#">3 comments</a></p>
+                                                </div>
+                                                <p>概要：经历 14-15 年新能源汽车市场的高速增长，国内对动力锂电池需求空前旺盛，在此背景下，国内企业蜂拥而上大幅度扩张锂电池产能，致市场面临产品质量鱼。</p>
+                                                <div class="my-btn">
+                                                    <button class="btn academy-btn mt-30" type="submit">点击下载</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="single-blog-post mb-50 wow fadeInUp dataBox" data-wow-delay="300ms">
+                                        <div style="display: flex;justify-content: space-between;">
+                                            <div class="blog-post-thumb my-datas"></div>
+                                            <div>
+                                                <a href="#" class="post-title">新能源汽车系列深度报告动力锂电池篇：大浪淘沙，动力锂电池洗牌开局</a>
+                                                <div class="post-meta">
+                                                    <p>发布时间 | <a href="#">2017-11-20 10:03:22</a> | <a href="#">3 comments</a></p>
+                                                </div>
+                                                <p>概要：经历 14-15 年新能源汽车市场的高速增长，国内对动力锂电池需求空前旺盛，在此背景下，国内企业蜂拥而上大幅度扩张锂电池产能，致市场面临产品质量鱼。</p>
+                                                <div class="my-btn">
+                                                    <button class="btn academy-btn mt-30" type="submit">点击下载</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##### 问答语录End ##### -->
+                </div>
+            </section>  
+            <!-- ##### 资料库End ##### -->    
+        </div> 
+        <div class="tab-pane" id="commercial">
+            <!-- ##### 商业测评Start ##### -->
+            <section class="contact-area">
+                <div class="container" style="margin-bottom:50px;">
+                    <!-- ##### 问答语录Start ##### -->
+                    <div class="testimonials-area bg-img my-saying">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <form class="form-inline">
+                                        <div class="informationBox">
+                                            <p>您的详细信息：</p>
+                                            <div class="flexBox">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="姓名">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="公司名称">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="电子邮箱">
+                                                </div>
+                                            </div>
+                                            <div class="flexBox">
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="联系电话">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="公司地址">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="所在城市">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="informationBox">
+                                            <p>商业模式成立最关键的是：</p>
+                                            <div class="radioBox">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadio" id="optionsRadios1" value="option1" checked>
+                                                        平衡分配利润和风险
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadio" id="optionsRadios2" value="option2">
+                                                        挖掘和把握客户的隐性需求
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadio" id="optionsRadios3" value="option3">
+                                                        产品的定位和奖励机制
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadio" id="optionsRadios4" value="option4">
+                                                        盈利方式的选择
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="informationBox">
+                                            <p>您期待的服务类型：</p>
+                                            <div class="radioBox">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadi" id="optionsRadios5" value="option5" checked>
+                                                        自动化和科学化
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadi" id="optionsRadios6" value="option6">
+                                                        信息化和透明化
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadi" id="optionsRadios7" value="option7">
+                                                        信息化和自动化
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRadi" id="optionsRadios8" value="option8">
+                                                        科学化和标准化
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="informationBox">
+                                            <p>要降低企业复杂度业务的瓶颈，最重要的方法是：</p>
+                                            <div class="radioBox">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRad" id="optionsRadios9" value="option9" checked>
+                                                        核心资源
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRad" id="optionsRadios10" value="option10">
+                                                        保密机制
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRad" id="optionsRadios11" value="option11">
+                                                        商业模式
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRad" id="optionsRadios12" value="option12">
+                                                        法律法规
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="informationBox">
+                                            <p>您期待的服务类型：</p>
+                                            <div class="radioBox">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRa" id="optionsRadios13" value="option13" checked>
+                                                        研发和零售服务
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRa" id="optionsRadios14" value="option14">
+                                                        组装和批发
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRa" id="optionsRadios15" value="option15">
+                                                        零部件和营销
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsRa" id="optionsRadios16" value="option16">
+                                                        组装和零部件
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="informationBox">
+                                            <p>您期待的服务类型：</p>
+                                            <div class="radioBox">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsR" id="optionsRadios17" value="option17" checked>
+                                                        盈利产品的改变
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsR" id="optionsRadios18" value="option18">
+                                                        盈利方式的改变
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsR" id="optionsRadios19" value="option19">
+                                                        运营模式的改变
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="optionsR" id="optionsRadios20" value="option20">
+                                                        盈利环节的改变
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="informationBox" style="text-align:center;">
+                                            <button class="btn academy-btn mt-30" type="submit">提 交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##### 问答语录End ##### -->
+                </div>
+            </section>  
+            <!-- ##### 商业测评End ##### -->    
+        </div> 
+    </div>
+
+    <!-- ##### Footer Area Start ##### -->
+ <div class="footerpage"></div>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <script src="js/common.js"></script>
+    <script> 
+        $(function () { 
+            $('#myTab a:first').tab('show');//初始化显示哪个tab 
+            $('#myTab li:first').css("background-color","#FF3D4B");
+            $('#myTab a:first').css("color","#FFF");
+            
+            $('#myTab li').click(function (e) { 
+
+                e.preventDefault();//阻止a链接的跳转行为 
+                $(this).find('a').tab('show');//显示当前选中的链接及关联的content 
+                $(this).css("background-color","#FF3D4B");
+                $(this).find('a').css("color","#FFF");
+                $("#myTab li").not($(this)).css("background-color","#FFF");
+                $("#myTab li").not($(this)).find('a').css("color","#FF3D4B");
+
+            })     
+        }) 
+    </script>
+</body>
+
+</html>

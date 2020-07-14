@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <swiper-item imgUrls="{{imgUrls}}"></swiper-item>
+  </view>
+  <view class="course-head">最新活动</view>
+  <view style="padding:0 30rpx">
+    <course-cell courseList="{{courseList}}"></course-cell>
+  </view>
+  <view class="loader-more" wx:if="{{isLoadAll}}">我是有底线的～</view>
+</view>

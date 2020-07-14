@@ -1,0 +1,24 @@
+<!-- pages/getMember/getMenber.wxml -->
+<scroll-view class="container">
+    <!-- 类型 -->
+    <view class="memberTypeBox">
+        <text class="typeBoxTitle">选择会员类型</text>
+        <view class="typeBtnBox">
+            <button wx:for="{{memberTyps}}" wx:for-index="index" wx:key="index" data-index="{{index}}" class="typeBtn" bind:tap="typeBtnDidSelected" style="{{selectIndex == index ? 'background: #FFF5E8;border: 1px solid #D5A465;' : ''}}" disabled='{{item.cardType <= curreLevel}}'>
+                <text class="typeBtnTitle">{{item.memberName}}</text>
+                <text class="typeBtnDes">{{item.cardType <= curreLevel ? '已激活' : item.des}}</text>
+            </button>
+        </view>
+    </view>
+    <!-- 会员权益 -->
+    <view class="memberTypeBox" style="margin-top: 20rpx;">
+        <text class="typeBoxTitle">会员权益</text>
+        <view class="callBox" wx:for="{{rightDescriptions[selectIndex]}}" wx:for-index="index" wx:for-item="item" wx:key="index" hover-class="none" hover-stop-propagation="false">
+            <text wx:if="{{rightDescriptions[selectIndex].length > 1 }}" class="indexText">{{index + 1}}.</text>
+            <text class="rightText">{{item}}</text>
+        </view>
+    </view>
+    <button wx:if="{{selectIndex != 2 }}" class="footer-bottom" hover-class="none" bind:tap="submitBtnDidTapped">
+        <text class="payLab">去付款</text>
+    </button>
+</scroll-view>

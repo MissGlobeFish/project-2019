@@ -1,0 +1,10 @@
+**/screenshots/
+**/.DS_Store
+**/node_modules/
+**/dist/
+**/npm-debug.log
+**/config/host.env.js
+
+.DS_Store 
+*/.DS_Store 
+

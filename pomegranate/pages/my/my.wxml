@@ -1,0 +1,77 @@
+<!-- pages/my/my.wxml -->
+<view class="containor" hover-class="none" hover-stop-propagation="false">
+    <view class="userInfoBox" hover-class="none" hover-stop-propagation="false">
+        <image class="userCardBackIMG" src="/images/icon/my-userInfoCard.png" mode="aspectFit"></image>
+        <!-- 头像 -->
+        <view class="userinfo-avatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <!-- 昵称 等级 -->
+        <view class="userName">
+            <open-data type="userNickName"></open-data>
+            <view class="userLevel">{{ 'Lv ' + userLevel}}</view>
+        </view>
+        <!-- 用户 ID -->
+        <button class="userIdBtn" bind:tap="userIdBtnDidTapped">{{ '用户ID：' + userId}}</button>
+        <!-- 会员标签 -->
+        <view class="memberInfoBox" hover-class="none" hover-stop-propagation="false">
+            <image class="meberImage" src="{{memberLv > 'Y0' ? '/images/icon/my-member.png' : '/images/icon/my-nonmember.png'}}" mode="aspectFit"></image>
+            <view class="{{memberLv > 'Y0' ? 'meberLab' : 'nonmeberLab'}}">{{ memberName }}</view>
+        </view>
+        <!-- 升级会员 -->
+        <button wx:if="{{ memberLv < 'Y3' }}" class="getMemberBtn" bind:tap="getMemberBtnDidTapped">
+            <text>升级会员</text>
+            <image src="/images/icon/rightArrow_white.png" mode="aspectFit"></image>
+        </button>
+    </view>
+    <!-- 报名分享 -->
+    <!-- <view wx:if="{{ memberLv > 'Y1' }}" class="shareBox" bind:tap="shareBtnDidTapped">
+        <image class="shareBackImage" src="/images/icon/shareBtnBackIMG.png" mode="aspectFill"></image>
+        <text>报名成为分享嘉宾</text>
+        <view class="alignCenterFlex" style="z-index: 9;">
+            <text class="shareLabel">去报名</text>
+            <image class='shareArrow' src="/images/icon/rightArrow_gray.png" mode="aspectFit"></image>
+        </view>
+    </view> -->
+    <!-- 报名分享 -->
+    <view wx:if="{{ memberLv > 'Y0' }}" class="shareBox" bind:tap="inviteBtnDidTapped">
+        <image class="shareBackImage" src="/images/icon/inviteBtnBackIMG.png" mode="aspectFill"></image>
+        <text>邀请朋友成为研习会员</text>
+        <view class="alignCenterFlex" style="z-index: 9;">
+            <text class="shareLabel">去邀请</text>
+            <image class='shareArrow' src="/images/icon/rightArrow_gray.png" mode="aspectFit"></image>
+        </view>
+    </view>
+    <!-- 会员 & 券 & 研值 -->
+    <view class="alignCenterFlex innerBtnBox" style="margin-top:{{ memberLv > 'Y3' ? 0 : 40 }}rpx">
+        <button class="innerBtn" hover-class="btn-hover" wx:for="{{innerBtnDatas}}" wx:key="{{index}}" data-celldata="{{item}}" bind:tap="didSelectCell">
+            <view class="innerBtnValue">{{item.value}}</view>
+            <view class="innerBtnLabel">{{item.label}}</view>
+        </button>
+    </view>
+    <!-- 签到 && 权益 -->
+    <view class="alignCenterFlex innerBtnBox">
+        <button class="inner2ndBtn" hover-class="btn-hover" data-celldata="{{inner2ndBtnDatas[0]}}" bind:tap="didSelectCell">
+            <image class="innerBtnIMG" src="{{inner2ndBtnDatas[0].image}}" mode="aspectFit"></image>
+            <view class="innerBtnLabel">{{inner2ndBtnDatas[0].label}}</view>
+        </button>
+        <view class="halvingLine" ></view>
+        <button class="inner2ndBtn" hover-class="btn-hover" data-celldata="{{inner2ndBtnDatas[1]}}" bind:tap="didSelectCell">
+            <image class="innerBtnIMG" src="{{inner2ndBtnDatas[1].image}}" mode="aspectFit"></image>
+            <view class="innerBtnLabel">{{inner2ndBtnDatas[1].label}}</view>
+        </button>
+    </view>
+</view>
+<!-- 其他功能 -->
+<view class="contentBox">
+    <view wx:for="{{listFunctionDatas}}" wx:key="{{index}}" class="functionCells" data-celldata="{{item}}" bind:tap="didSelectCell">
+        <view style="display:flex; align-items:center;">
+            <image class="cellImage" src="{{item.image}}"/>
+            <text class="cellLabel">{{item.label}}</text>
+        </view>
+        <view class="alignCenterFlex" hover-class="none" hover-stop-propagation="false">
+            <text wx:if="{{item.value && item.value != 0 }}" class="cellValueLabel">{{item.value}}</text>
+            <image class='detaileArrow' src="/images/icon/rightArrow_gray.png" mode="aspectFit"></image>
+        </view>
+    </view>
+</view>

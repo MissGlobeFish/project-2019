@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wxb_crm_rn.xgpush" >
+    <application
+      >
+
+
+    </application>
+</manifest>

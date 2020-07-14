@@ -1,0 +1,52 @@
+/* components/swiper-component/swiper-component.wxss */
+.swiper {
+  height: 420rpx;
+}
+.swiper-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.slide-image {
+  /* border-radius: 5px; */
+  /* width: 700rpx; */
+  height: 100%;
+  margin:auto;
+  /* transform: scale(0.9);
+  transition: all 0.3s ease; */
+  width: 100%;
+}
+
+
+.swiper-item-text {
+  height: 90rpx;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,.4)
+}
+.swiper-item-text text {
+  color: #fff;
+  line-height: 90rpx;
+  margin-left: 25rpx;
+  font-size: 36rpx;
+}
+
+.dot-wrap {
+  position: absolute;
+  bottom: 32rpx;
+  right: 10rpx;
+}
+.dot-item {
+  width: 18rpx;
+  height: 18rpx;
+  float: left;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  background: rgba(255,255,255,1)
+}
+.active-color {
+  background-color: #1f45f5
+}
+

@@ -1,0 +1,131 @@
+/* pages/ticketReceive/ticketReceive.wxss */
+.container {
+    padding: 0 20rpx;
+}
+
+.backImage {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backBtn {
+    position: absolute;
+    left: 0;
+    top: 30rpx;
+    height: 48rpx;
+    background:linear-gradient(90deg,rgba(255,61,75,1) 0%,rgba(255,92,92,1) 100%);
+    border-radius: 0 28rpx 28rpx 0 ;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding-right: 28rpx;
+    padding-left: 2rpx;
+    box-shadow:0px 2px 2px 0px rgba(240,61,61,0.47);
+}
+.backBtn >text {
+    font-size:28rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    line-height:28rpx;
+}
+.backBtn >image {
+    transform: rotate(-180deg);
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    width: 24rpx;
+    height: 24rpx;
+}
+
+
+.receiveTitle{
+    margin-top: 110rpx;
+    width: 100%;
+    font-size:40rpx;
+    font-family:PingFangSC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:40rpx;
+}
+.ticketBox {
+    padding: 30rpx;
+    margin: 50rpx auto;
+    width: 100%;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 31px 0px rgba(0,0,0,0.17);
+    border-radius:8rpx;
+}
+
+.ticketImage {
+    width: 210rpx;
+    height: 210rpx;
+}
+
+.titleDesBox {
+    margin-left: 30rpx;
+    flex: 1;
+}
+.title {
+    margin-top: 15rpx;
+    font-size:20px;
+    font-family:PingFangSC-Medium;
+    font-weight:500;
+    color:rgba(53,53,53,1);
+}
+.des {
+    margin-top: 20rpx;
+    font-size:13px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(128,128,128,1);  
+}
+
+.sbmitBtn{
+    margin-top: 62rpx;
+    margin-bottom: 46rpx;
+    width:100%;
+    height:110rpx;
+    background:rgba(255,61,75,1);
+    box-shadow:0px 9px 24px 0px rgba(255,61,75,0.25);
+    border-radius:55rpx;
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    line-height: 110rpx;
+}
+button[disabled]:not([type])  {
+    background:rgba(81,80,85,1);
+    color: #fff;
+    box-shadow: 0px 9px 24px 0px #fff;
+}
+
+
+.modal-content {
+    min-height: 314rpx;
+    padding: 60rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalIcon {
+    height: 158rpx;
+    width: 119rpx;
+}
+.modalTitle {
+    margin-top: 20rpx;
+    font-size:18px;
+    font-family:PingFangSC-Medium;
+    font-weight:500;
+    color:rgba(50,50,50,1);
+}
+.modalDes {
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(50,50,50,1);
+}
+.ticketName {
+    color:rgba(255,61,75,1);
+}

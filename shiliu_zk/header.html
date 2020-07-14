@@ -1,0 +1,65 @@
+<header class="header-area">
+    <div class="academy-main-menu">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+
+          <!-- Menu -->
+          <nav class="classy-navbar justify-content-between" id="academyNav">
+            <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- close btn -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav text-center">
+                <ul>
+                  <li><a href="index.html">首&emsp;页</a><i class="bottom-line"></i></li>
+                  <li><a href="product-server.html?a=b">产品服务</a><i class="bottom-line"></i></li>
+                  <li><a href="resource.html">资源矩阵</a><i class="bottom-line"></i></li>
+                  <li><a href="news.html">新闻动态</a><i class="bottom-line"></i></li>
+                  <li><a href="shiliu-course.html">石榴商学院</a><i class="bottom-line"></i></li>
+                  <li><a href="club.html">千企俱乐部</a><i class="bottom-line"></i></li>
+                  <li><a href="about-us.html">关于我们</a><i class="bottom-line"></i></li>
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+<script>
+  $(function() {
+    navHighlight();
+  })
+
+/**
+ * 导航高亮显示
+ */
+ function navHighlight() {
+  var pathname = window.location.pathname.slice(1);
+  var menuPathArr = [];
+  $(".classynav a").each(function(index,item) {
+    if($(this).attr("href").indexOf("?") != -1) {
+      $(this).attr("href", $(this).attr("href").slice(0,$(this).attr("href").indexOf("?")))
+    }
+    if (pathname ==  $(this).attr("href")) {
+      $(this).css("color","#FF3D4B")
+      $(this).css("box-shadow", "1px 2px 10px #a9a8a8")
+      $(this).css("border-top", "4px solid #ff3d4b")
+    }
+  })
+
+}
+  
+</script>

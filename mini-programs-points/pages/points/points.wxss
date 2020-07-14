@@ -1,0 +1,82 @@
+/* pages/points/points.wxss */
+.top-wrap {
+  display: flex;
+  padding: 60rpx 0 40rpx 0;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.top-wrap .item  {
+  width: 50%;
+  position: relative;
+}
+.top-wrap .item:nth-child(odd) {
+  border-right: 1px solid #fff;
+}
+.top-wrap .item .item-icon {
+  position: relative;
+  width: 76rpx;
+  height: 76rpx;
+  margin: auto;
+}
+.top-wrap .unread{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  top: -15rpx;
+  right: -15rpx;
+  font-size: 26rpx;
+  border-radius: 50%;
+  background-color: #fb0707;
+  line-height: 30rpx;  
+}
+.top-wrap .item .item-title {
+  margin-top: 30rpx;
+}
+
+
+
+/* 基本 */
+.modules {
+  padding: 35rpx 0 0 0;
+  background: #fff;
+}
+.modules .common-sub-title{
+  padding: 0 20rpx;
+}
+.modules .content{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+.modules .content .item {
+  width: 33.33%;
+  margin: 35rpx 0;
+}
+.modules .content .item .img-wrap {
+  height: 66rpx;
+}
+.modules .content .item image {
+  width: 66rpx;
+  height: 66rpx;
+}
+.modules .item-title{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+.base-wrap .content .item:nth-child(2) image{
+  width: 60rpx;
+  height: 56rpx;
+}
+.base-wrap .content .item:nth-child(4) image{
+  width: 50rpx;
+  height: 58rpx;
+}
+
+.other-wrap {
+  margin-top: 10rpx;
+}
+.other-wrap .content .item:nth-child(2) image{
+  width: 52rpx;
+  height: 58rpx;
+}

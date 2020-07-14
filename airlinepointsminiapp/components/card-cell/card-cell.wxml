@@ -1,0 +1,28 @@
+<!-- components/card-cell/card-cell.wxml -->
+<view>
+  <view class="card-cell">
+    <block>
+      <view class="card-coverimg">
+        <view class="card-reduce">¥<text class="">120</text></view>
+        <view class="card-condition">满199可用</view>
+      </view>
+      <view class="card-info">
+        <view class="card-title">良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券良品铺子150元优惠券</view>
+        <view class="card-info-bottom">
+          <text class="card-time-text">2018-12-12至2019-12-12</text>
+          <view class="more-btn" bindtap="handleMore">查看详情</view>
+        </view>
+      </view>
+    </block>   
+  </view>
+  <view class="content-bottom" wx:if="{{isShowDetail}}">
+    <view>使用说明：</view>
+    <view>北京王府井希尔顿酒店单人自助餐通兑服务，兑换凭证为:hrxxxxx </view>
+    <view>有效期至2020-08-26，短信发送之日起生效(特殊节假日除外)。</view>
+    <view>您可在北京王府井希尔顿酒店使用，午餐可用时段为(周一至周日)，晚餐可用时段为(周四至周六)，请您至少提前一天拨打餐厅电话010-58128888预定餐位</view>
+    <view>酒店地址: 北京市东城区王府井东街8号。也可咨询4000xxxxxx获取使用说明。</view>
+  </view>
+    
+</view>
+  
+  

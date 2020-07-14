@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 1、在json 注册组件 2、使用组件 3、courseList向子组件传输数据 4、 在子组件js里面接收courseList字段-->
+  <view class="course-head">近期课程</view>
+  <view style="padding:0 30rpx">
+    <course-cell courseList="{{courseList}}"></course-cell>
+  </view>
+  <view class="loader-more" wx:if="{{isLoadAll}}">我是有底线的～</view>
+</view>

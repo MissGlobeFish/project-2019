@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "form-input": "/components/common/form-input/form-input"
+  },
+  "navigationBarTitleText": "登录",
+  "disableScroll" :true
+}

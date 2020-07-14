@@ -1,0 +1,123 @@
+<!-- pages/details/details.wxml -->
+<wxs module="teacherWxs" src="../../wxParse/filter.wxs"></wxs>
+<ske-details wx:if="{{code == 0}}"></ske-details>
+<view class="container" wx:if="{{code == 1}}">
+  <view class="header-bg-wrap">
+    <view class="header-bg" style="background-image:url({{fileBaseUrl+datas.titlePageImg}})"></view>
+  </view>
+  <view class="main-info">
+    <view class="header">
+      <view class="pic-wrap">
+        <image wx:if="{{datas.titlePageImg}}" src="{{fileBaseUrl+datas.titlePageImg}}"  mode="aspectFill"></image>
+        <!-- <view class="sub-icon {{datas.courseType == 'C2'? 'color-1':'color-3'}}">{{teacherWxs.courseType(datas.courseType)}}</view> -->
+        <view class="sub-icon color-3}}">{{datas.courseName}}</view>
+      </view>
+      <view class="right">
+        <view class="title">{{datas.title}}</view>
+        <text class="font-24 course-icon">{{datas.courseType == 'C1' ? '课程' : '活动'}}</text>
+        <view class="price fc-1"><text class="price-sub">¥</text>{{datas.currentPrice}}</view>
+      </view>
+    </view>
+
+    <view class="content">
+      <view class="content-top">
+        <view class="info-text"><image src="../../images/icon/time-icon-des.png" class="icon"></image>{{datas.courseDate}} {{datas.courseStartTime}}-{{datas.courseEndTime}}</view>
+        <view class="info-text" bindtap='openLocation'><image src="../../images/icon/map-icon.png" class="icon"></image><text>{{datas.addr}}</text></view>
+      </view>
+      <segmentedBar titles="{{['课程介绍','主讲嘉宾']}}" centerDisplay="{{false}}" bind:segmentedBarDidSelected='segmentedBarDidSelectedAt' />
+      <view class="detail-mid detail-html" hover-class="none" wx:if="{{currentIndex == 0}}">
+        <view style="padding: 0 10rpx">
+          <rich-text nodes="{{datas.content}}"></rich-text>
+        </view>
+      </view>
+          <view class="detail-mid detail-html" hover-class="none" wx:if="{{currentIndex == 1}}">
+      <view class="teacher-item" wx:for="{{teachers}}" wx:key="{{index}}">
+        <view class="teacher-top">
+          <image class="teacher-img" src="{{fileBaseUrl + item.teacherImage}}"  mode="aspectFill" lazy-load="true" binderror="" bindload="">
+          </image>
+          <view class="teacher-name">
+            <text>{{item.teacherName}}</text>
+            <view class="position" wx:if="{{item.position}}">{{item.position}}</view>
+            <!-- <text style="color:#808080;font-size: 24rpx;">({{teacherWxs.teacherType(item.teacherType)}})</text> -->
+          </view>
+        </view>
+          
+        <view class="rich-text">
+          <view class="rich-text-title">嘉宾简介:</view>
+          <rich-text nodes="{{item.teacherDesc}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    </view>
+     <view class="detail-bottom" hover-class="none">
+      <view class="applyNum font-32">已报名 {{datas.signUpNum || 0}} 人</view>
+      <button hover-class="none" class="apply font-32" bindtap="handleApply" 
+      disabled='{{datas.signUp != true}}'>{{applyText}}</button>
+    </view>
+  </view>
+
+
+
+  <!-- <view class="main-info">
+    <view class="info-pic">
+      <swiper-component imgUrls="{{datas.picList}}"></swiper-component>
+    </view>
+    <view class="info-text">
+      <view class="info-item info-sub font-32">
+<wxs module="teacherWxs" src="../../wxParse/filter.wxs"></wxs>
+        <text class="sub-icon  {{datas.courseType == 'C2'? 'color-1':''}}">{{teacherWxs.courseType(datas.courseType)}}</text>
+        {{datas.courseName}}
+      </view>
+      <view class="course-info">
+        <view>
+          <text class="time">授课时间：{{datas.courseDate}} {{datas.courseStartTime}}-{{datas.courseEndTime}}</text>
+        </view>
+        <view>
+          <text class="font-32 price">￥{{datas.currentPrice}}</text>
+        </view>
+      </view>
+      <view class="map-wrap font-32" bindtap='openLocation' >
+        <image class="icon-img" src="../../images/icon/map.png" />
+        {{datas.addr}}
+      </view>
+    </view>
+  </view>
+  <view class="detail-wrap" style="padding-top: 0;">
+
+    <view class="detail-top staticTop" hover-class="none">
+      <view class="detail-title" hover-class="none">
+        <view class="detail-title-item" wx:for="{{detailsTitle}}" bindtap="tapSelect" data-idx="{{index}}" wx:key="{{index}}" data-hash="nav{{index}}">
+          <text class="font-32">{{item}}</text>
+          <view class="selectText" wx:if="{{index == currentIndex}}"></view>
+        </view>
+      </view>
+      
+    </view>
+
+    <view class="detail-mid detail-html" hover-class="none" wx:if="{{currentIndex == 0}}">
+      <view style="padding: 0 10rpx">
+        <rich-text nodes="{{datas.content}}"></rich-text>
+      </view>
+    </view>
+    <view class="detail-mid detail-html" hover-class="none" wx:if="{{currentIndex == 1}}">
+      <view class="teacher-item" wx:for="{{teachers}}" wx:key="{{index}}">
+        <view class="teacher-top">
+          <image class="teacher-img" src="{{item.teacherImage}}" mode="aspectFit" lazy-load="true" binderror="" bindload="">
+            
+          </image>
+          <view>
+            <text class="font-32" style="margin-right: 28rpx;">{{item.teacherName}}</text>
+            <text style="color:#808080;font-size: 24rpx;">({{teacherWxs.teacherType(item.teacherType)}})</text>
+          </view>
+        </view>
+          
+        <rich-text nodes="{{item.teacherDesc}}"></rich-text>
+      </view>
+    </view>
+    <view class="detail-bottom" hover-class="none">
+      <view class="applyNum font-32">已报名{{datas.signUpNum || 0}}人</view>
+      <button hover-class="none" class="apply font-32 {{datas.signStatus == 2 ? 'allSale': ''}}" bindtap="handleApply" 
+      disabled='{{datas.signUp != true}}' >{{applyText}}</button>
+    </view>
+  </view> -->
+</view>

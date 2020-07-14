@@ -1,0 +1,128 @@
+/* pages/getMember/getMenber.wxss */
+
+.container {
+    padding-bottom: 300rpx;
+}
+
+.memberTypeBox {
+    background-color: #fff;
+    width: 100%;
+    padding: 30rpx 40rpx 40rpx 40rpx;
+}
+.typeBoxTitle {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #353535;  
+}
+.typeBtnBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.typeBtn {
+    background: #F4F4F4;
+    width: 30%;
+    height: 120rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.typeBtnTitle {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #BE731A;
+    line-height: 1;
+}
+.typeBtnDes {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #353535;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+
+/* 会员权益 */
+.callBox {
+    margin-top: 15rpx;
+    padding: 20rpx;
+    padding-top: 0;
+    display: flex;
+}
+.indexText {
+    /* background-color: aquamarine; */
+    display: block;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(128,128,128,1);
+    line-height: 40rpx;
+}
+
+.rightText {
+    /* background-color: pink; */
+    display: block;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(128,128,128,1);
+    line-height: 40rpx;
+}
+
+/* .showAllBtnText {
+    float: right;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(128,128,128,1);
+    line-height:40px;
+} */
+
+/* 
+.showAllBtnText::after {
+    display: inline-block;
+    content: '';
+    width: 14rpx;
+    height: 14rpx;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    transform: rotate(45deg);
+    margin-top: -7rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+    transition: 0.25s;
+  }
+  .showAllBtnTextTrans::after {
+    margin-top: 0;
+    transform: rotate(-135deg);
+}  
+.showAllBtnImage {
+    margin-left: 10px;
+    width: 30rpx;
+    height: 16rpx;
+    transition: 0.25s;
+    background-color: orange
+} */
+
+
+/* 支付 */
+.footer-bottom {
+    color: #FFFFFF;
+    margin-top: 20rpx;
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background:linear-gradient(90deg,rgba(255,63,63,1) 0%,rgba(253,97,97,1) 100%);
+    box-shadow:0px 9px 21px 0px rgba(240,61,61,0.47);
+}
+.payLab {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+}

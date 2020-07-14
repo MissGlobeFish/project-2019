@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "check-item": "/components/check-item/check-item"
+  }
+}

@@ -1,0 +1,26 @@
+/* pages/pointsRule/pointsRule.wxss */
+
+.typeBox {
+    background-color: #fff;
+    width: 100%;
+    padding: 40rpx;
+}
+
+.typeBoxTitle {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #353535;  
+}
+
+.rightText {
+    display: block;
+    padding-left: 20rpx;
+    padding-bottom: 20rpx;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(128,128,128,1);
+    line-height:36px;
+    overflow: hidden;
+}
+

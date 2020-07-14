@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>渠道下单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta content="telephone=no" name="format-detection">
+
+    <script type="text/javascript" src="https://g.alicdn.com/dingding/open-develop/1.6.9/dingtalk.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      var _config = {};
+      var data = window.location.protocol + '//' + window.location.host + window.location.pathname + window.location.search;
+      $(document).ready(function(){
+          $.ajax({
+              type: "POST",
+              url: "/erp-api/erp/open/dingding/signature",
+              data: {"url":data},
+              cache:false,
+              success: function(data){
+                  _config = data;
+                  dd.config({
+                    appId : _config.agentid,
+                    corpId : _config.corpId,
+                    timeStamp : _config.timeStamp,
+                    nonceStr : _config.nonceStr,
+                    signature : _config.signature,
+                    type: 0, 
+                    jsApiList : [ 'runtime.info', 'biz.contact.choose',
+                        'device.notification.confirm', 'device.notification.alert',
+                        'device.notification.prompt', 'biz.ding.post',
+                        'biz.util.openLink','biz.user.get' ]
+                  });
+
+                  dd.ready(function(){
+                      dd.biz.user.get({
+                          onSuccess: function (info) {
+                            window.localStorage.setItem("userId",info.emplId);
+                          },
+                          onFail: function (err) {
+                            alert('error: ' + JSON.stringify(err));
+                          }
+                      });
+                  });
+                  dd.error(function(error){
+                      alert('error: ' + JSON.stringify(error));
+                  });
+              },
+              error: function(error){
+                  console.log(error)
+              }
+          });
+      })
+    </script>
+  </head>
+  <body>
+
+
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

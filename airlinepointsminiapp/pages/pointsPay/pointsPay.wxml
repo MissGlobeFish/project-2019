@@ -1,0 +1,32 @@
+<!-- pages/pointsPay/pointsPay.wxml -->
+<view class="container">
+  <view class="module-wrap">
+    <view class="cellBox" wx:for="{{trolleyDatas}}" wx:for-index="key" wx:for-item="value" wx:key="{{key}}">
+      <text class="cellNameLab">{{value.data.productName}}</text>
+      <text class="cellNumberLab">{{'x' + value.number}}</text>
+      <view style="width: 40%; text-align: right;">
+        <text class="cellAnountLab">{{value.number * (chargeWay == 0 ? value.data.currentPrice : value.data.currentScore) }}</text>
+        <text class="cellAmountUnit">{{chargeWay == 0 ? '元' : '研值'}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="footer-bottom" hover-class="none">
+    <view class="footer-left">
+      <text style="font-size: 36rpx;">应付：</text>
+      <text class="fc-1 numberText" style="font-size: 36rpx;">{{amount}}</text>
+      <text class="amountUnit">{{chargeWay == 0 ? '元' : '研值'}}</text>
+    </view>
+    <!-- 支付 -->
+    <button class="footer-right font-32" bind:tap="payBtnTapped">支付</button>
+  </view>
+  <my-modal id="myModal" confirmText="确认支付" autoHide confirmStyle="color:rgba(255,61,75,1);" bind:toParentConfirm="handleModeConfirm">
+    <view class="modal-content">
+      <view class="modal-titleText">确认付款</view>
+      <view style='padding: 50rpx;'>
+        <text class="modal-contentText">本次共消耗</text>
+        <text class="modal-contentText modal-importantText">{{amount}}</text>
+        <text class="modal-contentText">研值</text>
+      </view>
+    </view>
+  </my-modal>
+</view>

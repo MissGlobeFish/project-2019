@@ -1,0 +1,23 @@
+<!-- components/trolley-cell/trolley-cell.wxml -->
+<view class="cellContainer">
+    <text class="cellTitle">{{cellData.productName}}</text>
+    <view class="priceBox">
+         <!-- 研值 -->
+            <text wx:if="{{ cellData.priceType == 1 || cellData.priceType == 3 }}" class="priceNumber">{{ cellData.currentScore  * currentNumber}}</text>
+            <text wx:if="{{ cellData.priceType == 1 || cellData.priceType == 3 }}" class="priceUnit">研值</text>
+            <!-- 分隔符 -->
+            <text wx:if="{{ cellData.priceType == 3 }}" class="priceUnit">/</text>
+            <!-- 现金 -->
+            <text wx:if="{{ cellData.priceType == 0 || cellData.priceType == 3 }}" class="priceNumber">{{ cellData.currentPrice  * currentNumber }}</text>
+            <text wx:if="{{ cellData.priceType == 0 || cellData.priceType == 3 }}" class="priceUnit">元</text>
+    </view>
+    <view class="numberBox">
+        <button class="numberButton" wx:if="{{currentNumber > 0}}" bindtap="onTapminusBtn">
+            <image class="btnImage" src="/images/icon/shop-minus.png" mode="ascaleToFill"></image>
+        </button>
+        <view class="numberLabel" wx:if="{{currentNumber > 0}}">{{currentNumber}}</view>
+        <button class="numberButton" wx:if="{{currentNumber < cellData.productStock}}" bindtap="onTapPlusBtn">
+            <image class="btnImage" src="/images/icon/shop-plus.png" mode="scaleToFill"></image>
+        </button>
+    </view>
+</view>

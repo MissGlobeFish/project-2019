@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-card": "../../components/card-cell/card-cell",
+    "my-ticket": "../../components/ticket-cell/ticket-cell",
+    "segmentedBar": "../../components/common/segmentedBar/segmentedBar"
+  },
+  "navigationBarTitleText": "卡券",
+  "enablePullDownRefresh": true
+}

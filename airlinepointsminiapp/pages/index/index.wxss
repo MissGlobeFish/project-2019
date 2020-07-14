@@ -1,0 +1,25 @@
+/**index.wxss**/
+/* 引用外部wxss,必须加上分号 */
+@import "../../stylues/base.wxss";
+.container {
+  background-color: #fff;
+}
+.course-head {
+  font-size:40rpx;
+  height: 100rpx;
+  font-family:PingFangSC-Medium;
+  color:rgba(53,53,53,1);
+  padding: 34rpx 0 10rpx 0;
+  line-height:56rpx;
+  background-color: #fff;
+}
+.course-head::before {
+  content: '';
+  display: inline-block;
+  width: 10rpx;
+  height: 28rpx;
+  background-color: #FF564C;
+  margin-right: 24rpx;
+  /* 左上-右上-右下-左下*/
+  border-radius: 0 100px 100px 0; 
+}

@@ -1,0 +1,43 @@
+<!-- pages/shopping/shopping.wxml -->
+<view class="pageContainer">
+    <!-- <segmentedBar titles="{{['全部商品']}}" centerDisplay="{{false}}" bind:segmentedBarDidSelected='segmentedBarDidSelectedAt' /> -->
+    <view class="shop-head">全部商品</view>
+    <scroll-view class="shopScroll" style="height: {{windowHeight - 40 }}px" scroll-y upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" enable-back-to-top="true" bindscrolltoupper="onPullDownRefresh" bindscrolltolower="" bindscroll="">
+        <view class="list-inner">
+            <store-cell class="store-cell" wx:for="{{storeDatas}}" wx:for-item="goodsInfo" wx:key="{{index}}" cellData="{{goodsInfo}}" trolleyNumber="{{ trolleyDatas[goodsInfo.productId].number }}" bind:trolleyNumberDidChanged='trolleyNumberDidChanged' />
+        </view>
+    </scroll-view>
+    <!-- 蒙版 -->
+    <view class="blackMask" style="display: {{ showMask ? 'block' : 'none' }};" bind:tap="blackMaskDidTapped" catchtouchmove='catchTouchMove'>
+        <!-- 购物车列表详情 -->
+        <view class="slectListBackBox" catchtap='catchTap' catchtouchmove='catchTouchMove'>
+            <view class="listHeaderBox">
+                <text class="headertitle">您选购的商品</text>
+                <button class="cleanBtn" bind:tap="cleanBtnDidTapped">清空购物车</button>
+            </view>
+            <!-- 商品列表 -->
+            <scroll-view class="slectListScroll" scroll-y="true">
+                <trolley-cell wx:for="{{trolleyDatas}}" wx:for-index="key" wx:for-item="value" wx:key="{{key}}" cellData="{{value.data}}" trolleyNumber="{{ value.number }}" bind:trolleyNumberDidChanged='trolleyNumberDidChanged' />
+            </scroll-view>
+        </view>
+        <!-- 三角形 -->
+        <view class="triangle-down"></view>
+    </view>
+    <!-- 购物车 -->
+    <view wx:if="{{count > 0}}" class="trolleyCarBox {{ showMask ? 'trollayCarBoxGray' : ''}}"  catchtouchmove='catchTouchMove'>
+        <button class="trolleyButton" bind:tap="trolleyDetailBtnDidTapped">
+            <i-badge count="{{count}}" i-class="badge" overflow-count="100">
+                <image class="trolleyIcon" src="/images/icon/shop-trolleyCar.png" mode="aspectFill"></image>
+            </i-badge>
+            <view style="margin-left: 40rpx">
+                <text class="totlePriceText">{{scoreAmount}}</text>
+                <text class="totleUnitText">研值</text>
+            </view>
+        </button>
+        <button class="goNextBtn" bind:tap="trolleyGoPayBtnDidTapped">
+            <text class="goNextText">去结算</text>
+        </button>
+    </view>
+</view>
+
+<shopSheet visible="{{ sheetVisible }}" selectedIndex="{{sheetSelectIndex}}" bind:cancel="handleSheetCancel" bind:click="handleSheetClickItem" bind:clickSubmit="handleSheetClickSubmit" > </shopSheet>

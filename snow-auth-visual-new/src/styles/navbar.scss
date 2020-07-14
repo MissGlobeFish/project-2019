@@ -1,0 +1,33 @@
+
+.navbar {
+  height: 70px;
+}
+.navbar-header {
+  // width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 70px;
+  background: $default-bgColor;
+  .logo {
+    font-size: $logoText;
+    color: #fff;
+    img {
+      width: 47px;
+      height: 33px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+  .right-menu {
+    color: #fff;
+    cursor: pointer;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<!-- pages/loginUserInfo/loginUserInfo.wxml -->
+<view class="container">
+    <view class="inputTitle">{{userId ? '请核实您的信息' : '请补充您的信息'}}</view>
+    <form-input placeholder='姓名' name="name" value="{{userInfo.name}}" bind:inputValueDidChange="onGetValue" erorrStyle="{{errorStatus.name}}"></form-input>
+    <form-input placeholder='行业' name="business" value="{{userInfo.business}}" bind:inputValueDidChange="onGetValue" erorrStyle="{{errorStatus.business}}"></form-input>
+    <form-input placeholder='公司名称' name="company" value="{{userInfo.company}}" bind:inputValueDidChange="onGetValue" erorrStyle="{{errorStatus.company}}"></form-input>
+    <form-input placeholder='职务' name="post" value="{{userInfo.post}}" bind:inputValueDidChange="onGetValue" erorrStyle="{{errorStatus.post}}"></form-input>
+    <button class="submitBtn {{validCheck ? 'submitBtnOk' : 'submitBtnDisabled'}}" style="color:rgba(255,255,255,1); {{validCheck ? '':''}}" disabled="{{!validCheck}}" bind:tap="submit">
+        登录
+    </button>
+</view>
+

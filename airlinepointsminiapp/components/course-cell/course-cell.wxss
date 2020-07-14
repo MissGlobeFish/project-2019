@@ -1,0 +1,111 @@
+/* components/course-cell/course-cell.wxss */
+/* 玫红色 */
+.color-1 { 
+  background:linear-gradient(to right#FF3F3F,#FD6161);
+}
+/* 蓝色 */
+.color-3 {
+  background:linear-gradient(to right,#4C3AF9,#3869F9);
+}
+.course-cell {
+  background-color: #fff;
+  padding: 40rpx 0 30rpx 0;
+  
+}
+.course-cell:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}
+.top {
+  display: flex;
+  
+}
+.pic-wrap {
+  width: 200rpx;
+  height: 270rpx;
+  position: relative;
+}
+.pic-wrap>image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  /* filter:blur(2px); */
+}
+.pic-wrap .sub-icon {
+  position: absolute;
+  padding: 0 12rpx;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.info-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 26rpx;
+}
+/* .icon-pic {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-right: 12rpx;
+  position:relative;
+  top:-1px;
+} */
+.info-item.info-sub {
+  overflow: hidden;
+  font-family:PingFangSC-Semibold;
+  margin-bottom: 14rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  margin-top: 0;
+  line-height: 1.6;
+  color: #323232;
+}
+.info-item {
+  margin-top: 10rpx;
+}
+/* .item-text {
+  font-size: 24rpx;
+  color: #808080;
+} */
+
+
+.right-bottom {
+  margin-bottom: 13rpx;
+  display: flex;
+  /* text-align: right; */
+  justify-content: space-between;
+}
+.price {
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 1;
+  color: #FD6161;
+}
+.price-sub {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+.btn {
+  width: 112rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background:linear-gradient(to right,#FF3F3F,#FD6161);
+  border-radius:15px;
+  padding: 0;
+}
+/* .disable-btn {
+  background: #b1b1b1;
+} */

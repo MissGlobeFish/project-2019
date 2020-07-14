@@ -1,0 +1,31 @@
+<!--pages/signProject/signProject.wxml 已报名项目-->
+<view class="container">
+<!-- tab头部 -->
+  <segmentedBar titles="{{['待支付','待开始','已结束']}}" bind:segmentedBarDidSelected='segmentedBarDidSelectedAt'></segmentedBar>
+  <!-- 待支付 -->
+  <scroll-view class="list" style="height: {{windowHeight - 50 }}px" scroll-y upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" enable-back-to-top="true" wx:if="{{orderStatus == -1}}">
+    <view class="null-data" wx:if="{{payList.length < 1}}">
+      <image src="../../images/icon/null-icon.png"></image>
+      <text class="msg">暂无</text>
+    </view>
+    <sign-cell isShowRemark="{{false}}" list="{{payList}}" showPay="{{true}}" bind:payevent="payevent"></sign-cell>
+  </scroll-view> 
+
+  <!-- 待开始 -->
+  <scroll-view class="list" style="height: {{windowHeight - 50 }}px" scroll-y upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" enable-back-to-top="true"  wx:if="{{orderStatus == 0}}">
+    <view class="null-data" wx:if="{{courseList.length < 1}}">
+      <image src="../../images/icon/null-icon.png"></image>
+      <text class="msg">暂无</text>
+    </view>
+    <sign-cell isShowRemark="{{false}}" list="{{courseList}}"></sign-cell>
+  </scroll-view> 
+
+  <!-- 已结束 -->
+  <scroll-view class="list" style="height: {{windowHeight - 50 }}px" scroll-y upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" enable-back-to-top="true"  wx:if="{{orderStatus == 1}}">
+    <view class="null-data" wx:if="{{endcourseList.length < 1}}">
+      <image src="../../images/icon/null-icon.png"></image>
+      <text class="msg">暂无</text>
+    </view>
+    <sign-cell isShowRemark="{{true}}" list="{{endcourseList}}" bind:myevent="myevent"  ></sign-cell>
+  </scroll-view> 
+</view>

@@ -1,0 +1,46 @@
+/* pages/pointsPayResult/pointsPayResult.wxss */
+
+.container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    background-color: #fff;
+    align-items: center;
+    padding: 40rpx;
+}
+
+
+.signResultIcon {
+    margin-top: 12%;
+    width: 120rpx;
+    height: 160rpx;
+}
+
+.titleLab {
+    margin-top: 20rpx;
+    font-size:18px;
+    font-family:PingFangSC-Medium;
+    font-weight:500;
+    color:rgba(50,50,50,1);
+}
+.desLab {
+    margin-top: 40rpx;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(53,53,53,1);
+}
+.goBackBtn {
+    text-align: center;
+    padding: 28rpx 116rpx;
+    margin-top: 160rpx;
+    border-radius:4rpx;
+    border:1px solid rgba(151,151,151,1);
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(53,53,53,1);
+
+}

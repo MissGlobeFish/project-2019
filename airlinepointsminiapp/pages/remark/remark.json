@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-rate": "../../components/common/stars-cell/stars-cell"
+  },
+  "navigationBarTitleText": "评价"
+}

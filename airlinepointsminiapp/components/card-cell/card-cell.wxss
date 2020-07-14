@@ -1,0 +1,72 @@
+/* components/card-cell/card-cell.wxss */
+.card-cell {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* 左侧封面 */
+.card-coverimg {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 200rpx;
+  height: 180rpx;
+  color: #fff;
+  background: #6776de;
+  text-align: center;
+  justify-content: center;
+}
+
+.card-reduce>text {
+  font-size: 40rpx;
+}
+.card-condition {
+  font-size: 24rpx;
+}
+
+/* 右侧信息 */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  /* margin-bottom: 5px; */
+  flex: 1;
+}
+.card-title {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #353535;
+  margin-top: 10px;
+  height: 70rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card-info-bottom text {
+  margin-top: 10px;
+  font-size: 20rpx;
+}
+.more-btn {
+  border-top: 1px solid #eee;
+  font-size: 20rpx;
+  color: #888;
+  height: 24px;
+  line-height: 24px;
+}
+
+/* 商品介绍 */
+.content-bottom{
+  transition: all  2s;
+  margin-top: 5px;
+}
+.content-bottom>view {
+  font-size: 20rpx;
+  padding: 0 32rpx;
+  color: #888;
+  line-height: 1.8;
+}

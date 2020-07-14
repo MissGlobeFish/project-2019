@@ -1,0 +1,109 @@
+/* pages/getMemberPay/getMemberPay.wxss */
+
+.container {
+    padding-bottom: 300rpx;
+}
+
+.memberTypeBox {
+    background-color: #fff;
+    width: 100%;
+    padding: 40rpx;
+}
+.typeBoxTitle {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #353535;  
+}
+
+/* 消费明细 */
+.productListCell {
+    width: 100%;
+    min-height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.cellTitle {
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(128,128,128,1);
+}
+.cellValue {
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(53,53,53,1);
+}
+
+/* 合计 */
+
+.totalAmount {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100rpx;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    background-color: #fff;
+    box-shadow:0px -1px 0px 0px rgba(204,204,204,0.5);
+}
+.totalText {
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    color:rgba(128,128,128,1);
+}
+.totalAmountPrice {
+    margin-left: 80rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Medium;
+    color:rgba(255,61,75,1);
+}
+
+/* 支付方式 */
+.cellBoder {
+    box-shadow: inset 0 -1px 0 0 #E8E8E8;
+}
+.chargeWayBox {
+    min-height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chargeWayImage {
+    width: 40rpx;
+    height: 40rpx;
+}
+.chargeWayLab {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #353535;
+    margin-left: 36rpx;
+}
+.cardInputBox {
+    padding-bottom: 62rpx;
+    padding-left: 76rpx;
+}
+
+/* 支付 */
+.footer-bottom {
+    color: #FFFFFF;
+    margin-top: 20rpx;
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background:linear-gradient(90deg,rgba(255,63,63,1) 0%,rgba(253,97,97,1) 100%);
+    box-shadow:0px 9px 21px 0px rgba(240,61,61,0.47);
+}
+.payLab {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+}

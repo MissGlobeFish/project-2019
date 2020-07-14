@@ -1,0 +1,155 @@
+@charset "utf-8";
+body {
+  overflow-y: scroll;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, th, td, input {
+  margin: 0;
+  padding: 0;
+}
+
+img, object, a img, :link img, :visited img, a object, :link object, :visited object {
+  border: 0
+}
+
+address, caption, cite, code, dfn, em, th, var, i {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+//表单元素
+form {
+  display: inline;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  border: 1px solid rgba(123, 174, 255, .8);
+  box-shadow: 0 5px 5px -5px rgba(123, 174, 255, .5);
+  -webkit-box-shadow: 0 5px 5px -5px rgba(123, 174, 255, .5);
+  -moz-box-shadow: 0 5px 5px -5px rgba(123, 174, 255, .5);
+}
+
+input[type='radio'] {
+  margin-left: 0;
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+  padding-top: 0;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+}
+
+button:focus {
+  outline: none;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+label, input, button {
+  vertical-align: middle;
+}
+
+//table初始化
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  font: 100%;
+
+  th {
+    display: table-cell;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+  }
+
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+  }
+}
+
+pre, code, kbd, samp, tt {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*解决图片缩小失真*/
+embed, object {
+  display: block;
+  outline: 0
+}
+
+img {
+  display: block
+}
+
+/*清除浮动*/
+.clear-fix {
+  *zoom: 1;
+}
+
+.clear-fix:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.f-left {
+  display: inline;
+  float: left;
+}
+
+.f-right {
+  float: right;
+}

@@ -1,0 +1,36 @@
+<!-- pages/my/my.wxml -->
+<scroll-view class="shopScroll" style="height: {{windowHeight - 40 }}px" scroll-y upper-threshold="50" lower-threshold="50" scroll-top="0" scroll-left="0" enable-back-to-top="true" bindscrolltoupper="onPullDownRefresh" bindscrolltolower="" bindscroll="">
+<view class="containor" hover-class="none" hover-stop-propagation="false">
+    <view class="userInfoBox" hover-class="none" hover-stop-propagation="false">
+        <image class="userCardBackIMG" src="/images/icon/my-userInfoCard.png" mode="aspectFit"></image>
+        <!-- 头像 -->
+        <view class="userinfo-avatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <!-- 昵称 等级 -->
+        <view class="userName">
+            <open-data type="userNickName"></open-data>
+        </view>
+        <!-- 用户 ID -->
+        <button class="userIdBtn" bind:tap="userIdBtnDidTapped">{{ '用户ID：' + userId}}</button>
+				<!-- 个人信息 -->
+        <button class="getMemberBtn" bind:tap="getMemberBtnDidTapped">
+            <text>个人信息</text>
+            <image src="/images/icon/rightArrow_white.png" mode="aspectFit"></image>
+        </button>
+    </view>
+</view>
+<!-- 其他功能 -->
+<view class="contentBox">
+		<view class="functionCells">
+        <view style="display:flex; align-items:center;">
+            <image class="cellImage" src="/images/icon/my-project.png" />
+            <text class="cellTitleLabel">卡包</text>
+        </view>
+    </view>
+    <view class="cardbagBox">
+      <card-item></card-item>
+    </view>
+      
+</view>
+</scroll-view>

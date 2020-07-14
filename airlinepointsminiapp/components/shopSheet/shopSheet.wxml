@@ -1,0 +1,24 @@
+<view class="i-as-mask i-class-mask {{ visible ? 'i-as-mask-show' : '' }}" bindtap="handleClickMask"></view>
+<view class="i-class i-as {{ visible ? 'i-as-show' : '' }}">
+    <view class="i-as-header">
+        <text class="sheetHeader">结算方式</text>
+    </view>
+    <view class="i-as-actions">
+        <view class="i-as-action-item" wx:for="{{ actions }}" wx:key="{{ item.label }}">
+            <!-- <button class="item-btn" bind:click="handleClickItem" data-index="{{ index }}"> -->
+                <view class="payWayBox {{index == actions.length - 1 ? '' : 'cellBoder'}}" bindtap="handleClickItem" data-index="{{ index }}">
+                    <view style="display:flex; align-items: center;">
+                        <image class="payIcon" src="{{item.icon}}" />
+                        <text class="payLabel">{{item.label}}</text>
+                    </view>
+                    <image class="payIcon" src="{{selectedIndex == index ? '/images/icon/checked.png' : '/images/icon/uncheck.png'}}" />
+                </view>
+            <!-- </button> -->
+        </view>
+    </view>
+    <view class="submit">
+        <button class="submit-btn" bind:tap="handleClickSubmit">
+            <text class="submit-btn-text">确定</text>
+        </button>
+    </view>
+</view>

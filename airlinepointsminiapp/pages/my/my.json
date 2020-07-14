@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "card-item": "/components/card-cell/card-cell",
+    "i-icon": "/dist/icon/index"
+  },
+  "navigationBarTitleText": "我的",
+	"enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

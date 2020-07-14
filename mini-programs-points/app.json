@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/points/ranking/ranking",
+    "pages/index/index",
+    
+    "pages/points/points",
+    "pages/points/apply-list/apply-list",
+    
+    "pages/my/my",
+    
+    "pages/news-detail/news-detail",
+    "pages/mall/mall",
+    "pages/reward/reward"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "积分管理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#808080",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/home-icon.png",
+        "selectedIconPath": "images/icon/home-active-icon.png"
+      },
+      {
+        "pagePath": "pages/points/points",
+        "text": "积分",
+        "iconPath": "images/icon/points-icon.png",
+        "selectedIconPath": "images/icon/points-active-icon.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "images/icon/mall-icon.png",
+        "selectedIconPath": "images/icon/mall-active-icon.png"
+      },
+      {
+        "pagePath": "pages/reward/reward",
+        "text": "悬赏",
+        "iconPath": "images/icon/home-icon.png",
+        "selectedIconPath": "images/icon/home-active-icon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icon/my-icon.png",
+        "selectedIconPath": "images/icon/my-active-icon.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-datetime-picker": "vant-weapp/datetime-picker/index",
+    "van-popup": "vant-weapp/popup/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

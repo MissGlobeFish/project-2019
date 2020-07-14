@@ -1,0 +1,22 @@
+<!--pages/cardDiscount/cardDiscount.wxml 卡券-->
+<view class="container">
+<segmentedBar titles="{{['券','卡']}}" centerDisplay="{{true}}" defaultIndex="{{ticket ? 0 : 1}}" bind:segmentedBarDidSelected='segmentedBarDidSelectedAt' />
+ <scroll-view  wx:if="{{ticket}}">
+   <view class="null-data" wx:if="{{ticketList.length < 1}}">
+      <image src="../../images/icon/null-icon.png"></image>
+      <text class="msg">没有券哦</text>
+    </view>
+    <my-ticket ticketList="{{ticketList}}"></my-ticket>
+    <view class="loader-more" wx:if="{{  ticket && ticketListPage.isLoadAll && ticketList.length > 0 }}">只有这么多了~</view>
+  </scroll-view>
+
+  <scroll-view scroll-y style="height: {{windowHeight - 50 }}px" bind:confirmCopy="confirmEvent"  wx:else>
+    <view class="null-data" wx:if="{{list.length < 1}}">
+      <image src="../../images/icon/null-icon.png"></image>
+      <text class="msg">没有卡哦</text>
+    </view>
+    <my-card list="{{list}}"></my-card>
+    <view class="loader-more" wx:if="{{ !ticket && listPageInfo.isLoadAll && list.length > 0 }}">只有这么多了~</view>
+  </scroll-view>
+ 
+</view>

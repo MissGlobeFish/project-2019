@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "form-input": "/components/common/form-input/form-input"
+  },
+  "navigationBarTitleText": "填写报名信息"
+}

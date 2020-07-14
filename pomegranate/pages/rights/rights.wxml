@@ -1,0 +1,19 @@
+<!-- pages/rights/rights.wxml -->
+<view class="backView">
+    <view class="headerBack">
+        <image class="headerImage" src="/images/icon/rights-headerBack.png" />
+        <text class="curreLevelLab">当前等级：</text>
+        <text class="levelLab">{{levelName}}</text>
+        <text class="levelDesLab">您的会员将于{{ memberDate }} 到期</text>
+    </view>
+    <view class="listBack">
+        <view class="cell">
+            <text class="cellNameLab">项目</text>
+            <text class="cellNameLab">您的权益</text>
+        </view>
+        <view wx:for="{{rightDetailes}}" wx:key="{{index}}" class="cell" >
+            <text class="cellNameLab contentText">{{rightDetailes[index].name}}</text>
+            <text class="cellNameLab contentText contenValueText">{{rightDetailes[index].info}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,48 @@
+/* pages/signScan/signScan.wxss */
+.container {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.signResultIcon {
+    margin-top: 265rpx;
+    width: 120rpx;
+    height: 160rpx;
+}
+
+.signResultText {
+    margin-top: 20px;
+    font-size:18px;
+    font-family:PingFangSC-Medium;
+    font-weight:500;
+    color:rgba(50,50,50,1);
+}
+.desLab {
+    margin-top: 40rpx;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(53,53,53,1);
+}
+
+.goBackBtn {
+    text-align: center;
+    padding: 28rpx 116rpx;
+    margin-top: 160rpx;
+    border-radius:4rpx;
+    border:1px solid rgba(151,151,151,1);
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(53,53,53,1);
+
+}

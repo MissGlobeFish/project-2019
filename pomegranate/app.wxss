@@ -1,0 +1,113 @@
+/**app.wxss**/
+
+page,
+view,
+text,
+image {
+    box-sizing: border-box;
+}
+
+page {
+    background-color: #F5F5F9;
+}
+
+view,
+text {
+    font-size: 28rpx
+}
+
+button::after {
+    border: none;
+}
+
+button {
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.font-24 {
+    font-size: 24rpx;
+}
+
+.font-32 {
+    font-size: 32rpx;
+}
+
+
+/* 固定在底部高度 */
+
+.fix-bottom-btn {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100rpx;
+}
+
+.fix-bottom-btn>button {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+
+/* 空页面 */
+
+.null-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.null-data>image {
+    width: 363rpx;
+    height: 276rpx;
+    margin-top: 163rpx;
+}
+
+.null-data .msg {
+    color: #808080;
+    font-size: 32rpx;
+    margin-top: 80rpx;
+}
+
+.alignCenterFlex {
+    display: flex;
+    align-items: center;
+}
+
+
+/* 玫红色 */
+
+.color-1 {
+    background: linear-gradient(90deg, rgba(255, 63, 63, 1) 0%, rgba(253, 97, 97, 1) 100%);
+}
+
+
+/* 灰色 */
+
+.color-2 {
+    background-color: #25242A;
+    opacity: .7
+}
+
+
+/* 蓝色 */
+
+.color-3 {
+    background: linear-gradient(to right, #4C3AF9, #3869F9);
+}
+
+.fc-1 {
+    color: #FF3D4B
+}
+
+.loader-more {
+    padding: 20rpx 0;
+    text-align: center;
+    color: #808080;
+    font-size: 26rpx;
+}

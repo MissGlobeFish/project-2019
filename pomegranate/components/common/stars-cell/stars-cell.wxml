@@ -1,0 +1,8 @@
+<!--components/common/stars-cell/stars-cell.wxml-->
+<!--index.wxml-->
+ 
+<block wx:for="{{stars}}" wx:key="{{index}}">
+  <image class="star-image" src="{{key > item ? selectedSrc : normalSrc}}" data-key="{{item+1}}" bindtap="selectStar">
+ </image>
+ 
+</block>

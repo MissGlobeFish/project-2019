@@ -1,0 +1,7 @@
+<!-- pages/pointsPayResult/pointsPayResult.wxml -->
+<view class="container">
+    <image class="signResultIcon" src="/images/icon/success-icon.png" mode="aspectFit"></image>
+    <view class="titleLab">恭喜你，购买成功</view>
+    <view class="desLab">商品已放入【我的】-【卡券】</view>
+    <view class="goBackBtn" bind:tap="goback">我知道了</view>
+</view>

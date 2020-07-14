@@ -1,0 +1,21 @@
+stages:
+  - scanner
+
+example-sonar:
+  stage: scanner
+  image: maven:3.6.1-jdk-8
+  script:
+    - mvn test
+    - mvn sonar:sonar 
+       -Dsonar.host.url=http://http://172.17.17.103:9000
+       -Dsonar.login=4491f52e8be5369f9f9eeaf74046bb6d3b041c1b
+       -Dsonar.jacoco.reportPaths=target/jacoco.exec
+       -Dsonar.projectKey=songjianxin-maven-jacoco
+       -Dsonar.gitlab.project_id=$CI_PROJECT_PATH
+       -Dsonar.gitlab.commit_sha=$CI_COMMIT_SHA
+       -Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME
+       -Dsonar.gitlab.url=http://gitlab.mixep.com:8000
+       -Dsonar.gitlab.user_token=ZUuqpMSSQTNxmJYuezje
+       -Dsonar.gitlab.comment_no_issue=true -X
+       -Dsonar.gitlab.ci_merge_request_iid=$CI_MERGE_REQUEST_IID
+       -Dsonar.gitlab.merge_request_discussion=true

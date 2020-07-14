@@ -1,0 +1,36 @@
+<!-- pages/invitePage/invitePage.wxml -->
+
+<!-- 预览区域  -->
+<!-- <view hidden='{{hidden}}' class='preview'>
+  <image src='{{prurl}}' mode='widthFix'></image>
+  <button type='primary' size='mini' bindtap='save'>保存分享图</button>
+</view> -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <image class="invitBackImage" src="/images/icon/invitePageBack.png" mode="scaleToFill" lazy-load="false"></image>
+    <!-- 邀请函 -->
+    <view class="ticketBox" hover-class="none" hover-stop-propagation="false">
+        <image class="inviteTicketImage" src="/images/icon/invite_ticket.png" mode="aspectFit" lazy-load="false"></image>
+        <!-- 二维码 -->
+        <view class="qrcodeBox" hover-class="none" hover-stop-propagation="false">
+            <canvas class='myQrcode' style="width: 100%; height: 100%;" canvas-id="myQrcode" />
+            <view class="avatar">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+        </view>
+        <text class="inviteLabel" selectable="false" space="false" decode="false">邀请好友扫码吧</text>
+    </view>
+    <text class="inviteText" selectable="false" decode>&emsp;还可以通过微信链接邀请好友&emsp;</text>
+    <!-- 分享按钮 -->
+    <view class="shareBtnBox" hover-class="none" hover-stop-propagation="false">
+        <button class="shareBtn" type="shareBtn" open-type="share">
+            <image class="btnLogo" src="/images/icon/invite_friend.png" mode="aspectFit"></image>
+            <text class="btnText" style="display: block;" selectable="false" space="false" decode="false">微信朋友</text>
+        </button>
+        <button class="shareBtn" type="shareBtn" bind:tap="save">
+            <image class="btnLogo" src="/images/icon/invite_moments.png" mode="aspectFit"></image>
+            <text class="btnText" style="display: block;" selectable="false" space="false" decode="false">朋友圈</text>
+        </button>
+    </view>
+</view>
+<!-- 画布大小按需定制 这里我按照背景图的尺寸定的  -->
+<canvas canvas-id="shareImg" id="shareImg" class="canvas"></canvas>

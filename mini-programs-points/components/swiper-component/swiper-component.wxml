@@ -1,0 +1,32 @@
+<!--components/swiper-component.wxml-->
+<view style="position: relative">
+  <swiper
+    class="swiper"
+    indicator-dots = "{{false}}"
+    indicator-color = "rgba(255, 255, 255, .5)"
+    indicator-active-color="rgba(255, 255, 255, 1)"
+    autoplay
+    interval = "{{5000}}"
+    duration = "{{500}}"
+    circular
+    bindchange = "swiperchange"
+  >
+  <block wx:for = "{{imgList}}" wx:key = "{{index}}">
+    <swiper-item class = "swiper-item">
+      <image src = "{{item.url}}" class = "slide-image"/>
+    </swiper-item>
+  </block>
+  </swiper>
+  
+  <!-- banner文字描述 -->
+  <view class="swiper-item-text">
+    <text>{{imgList[currentIndex].title}}</text>
+  </view>
+
+  <!-- 圆点 -->
+  <view class="dot-wrap">
+    <block wx:for = "{{imgList}}" wx:key = "{{index}}">
+      <view class="dot-item {{index == currentIndex ? 'active-color' : ''}}"></view>
+    </block>
+  </view>
+</view>

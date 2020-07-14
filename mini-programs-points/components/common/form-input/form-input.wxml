@@ -1,0 +1,17 @@
+<!--components/common/form-input/form-input.wxml-->
+<view class="input-item {{erorrStyle ? 'errorStyle' : ''}} {{borderNone? 'border-none' : ''}}" style="{{constainorStyle}}">
+  <input 
+    value="{{value}}"
+    placeholder="{{placeholder}}" 
+    type="{{type}}" 
+    maxlength='{{maxlength}}'
+    focus= "{{focus}}"
+    disabled="{{disabled}}"
+    data-inputName="{{name}}"
+    bindinput="changeInput"
+    bindblur = "onBlurEvent"
+   
+   ></input>
+   <text class="disabled-text" wx:if="{{disabled}}">不可修改</text>
+   <button wx:if="{{sendCode}}" class="send-code" bindtap='sendCode' disabled="{{sendCodeObj.disabled}}">{{sendCodeObj.text}}</button>
+</view>

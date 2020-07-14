@@ -1,0 +1,12 @@
+/**index.wxss**/
+
+.banner {
+  height: 420rpx;
+}
+
+
+/* 新闻列表 */
+.news-list-wrap {
+  padding: 0 20rpx;
+  background-color: #fff;
+}

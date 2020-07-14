@@ -1,0 +1,44 @@
+/* components/common/segmentedBar/segmentedBar.wxss */
+
+.segmentedBarContainer {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+}
+
+.centerContainer {
+  justify-content: center;
+}
+.startContainer {
+  justify-content: flex-start;
+}
+.aroundContainer {
+  justify-content: space-around;
+}
+.segmentedBarButton {
+  background-color: transparent;
+  padding-top: 11rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  display: flex;
+  align-items: center
+}
+
+.segmentedBarText,.segmentedBarTextSelected {
+  font-size:30rpx;
+  font-family:PingFangSC-Medium;
+  color: #353535;
+}
+
+
+.selectbar {
+  position: absolute;
+  width: 120rpx;
+  height: 10rpx;
+  border-radius: 3rpx;
+  /* background-color: #FF3D4B; */
+  background:#5d5afd;
+  transition: 0.25s;
+  margin-top: -10rpx;
+}

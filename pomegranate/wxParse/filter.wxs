@@ -1,0 +1,128 @@
+/**
+ * 课程状态 
+ */
+
+function courseStatus(dateVal,timeVal) {
+  
+
+  var dates = dateVal.split('.');
+  var datesArray = ""
+  // dates = dates[0] + dates[1] + dates[2] + dates[3] + "-" + dates[5] + dates[6] +"-" + dates[8] + dates[9];
+  for (var i = 0; i < dates.length;i++ ) {
+    datesArray += dates[i] + ((i != (dates.length - 1)) ? '-' : "")
+  }
+  
+  var endTime = datesArray+"T"+ timeVal;
+  endTime = Date.parse(endTime);
+  var currDate = getDate();
+  var currTime = currDate.getTime();
+  var msg;
+  if (currTime > endTime) {
+    msg =  true
+  } else {
+    msg = false
+  }
+
+  return msg
+}
+/**
+ * 课程，活动类型
+ */
+function courseType(value) {
+  if(value == 'C1') {
+    return '课程'
+  } else if(value == "C2"){
+    return '活动'
+  }
+}
+
+/**
+ * 授课教师类型
+ */
+function teacherType(value) {
+  if(value == 'T1') {
+    return '讲师'
+  } else if(value == "T2"){
+    return '嘉宾'
+  }
+}
+
+/**
+ * 卡券类型
+ * @param {Sting} cardType 
+ */
+function cardType(value) {
+  if (value == "Y1") {
+    return '../../images/y1.png'
+  } else if (value == "Y2") {
+    return '../../images/y2.png'
+  } else if (value == "Y3") {
+    return '../../images/y3.png'
+  }
+}
+
+
+/**
+ * 报名状态
+ */
+
+function signStatus(value) {
+  if (value == "PAY") {
+    return "已支付"
+  } else if (value == "WAIT_PAY") {
+    return "未支付"
+  } else if (value == "CANCEL") {
+    return "已取消"
+  } else if (value == "OK") {
+    return "已签到"
+  } else if (value == "WAIT_SIGN") {
+    return "待签到"
+  } else if (value == "FULL_AMOUNT") {
+    return "满额"
+  } else {
+    return ""
+  }
+}
+
+/**
+ * 时间
+ * 
+ */
+
+function formatDate(value,value2) {
+  function changeForamt(value){
+    var value = Date.parse(value) * 1
+    var d = getDate(value)
+    // return d
+    var Y,M,D,H,Minutes;
+    Y = d.getFullYear();
+    M = d.getMonth()+1;
+    D =  d.getDate();
+    H = d.getHours();
+    Minutes =  d.getMinutes();
+    if (M < 10) M = "0" + M;
+    if (D < 10) D = "0" + D;
+    if (Minutes < 10) Minutes = "0" + Minutes;
+      return {
+        Y: Y,
+        M: M,
+        D: D,
+        H: H,
+        Minutes: Minutes
+      }
+    }
+    var a = changeForamt(value)
+    var b = changeForamt(value2)
+
+  return [a.Y,a.M,a.D].join('.')
+    + ' '
+    + [a.H,a.Minutes].join(':')+'-'+ [b.H,b.Minutes].join(':')
+}
+module.exports = {
+  courseType:courseType,
+  teacherType:teacherType,
+  formatDate:formatDate,
+  cardType: cardType,
+  signStatus: signStatus,
+  courseStatus: courseStatus
+}

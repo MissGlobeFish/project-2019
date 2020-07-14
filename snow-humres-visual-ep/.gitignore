@@ -1,0 +1,9 @@
+screenshots/
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+constant.js
+config/index.js
+config/host.env.js
+config/dev.env.js

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "course-cell": "/components/course-cell/course-cell"
+  },
+  "navigationBarTitleText": "石榴研习院",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

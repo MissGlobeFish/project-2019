@@ -1,0 +1,46 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="top-wrap theme-bgcolor">
+    <view class="avatar">
+      <image src="../../images/avatar.jpeg" mode="aspectFill"/>
+    </view>
+    <view class="info">
+      <view class="message unread-msg">
+        <image  src="../../images/icon/msg-icon.png"/>
+      </view>
+      <view class="user-name">{{userInfo.userName}}</view>
+      <view class="dept">
+        <view class="empCode">工号：{{userInfo.empCode}}</view>
+        <view class="department">{{userInfo.department}}</view>
+        <view class="position ">{{userInfo.position}}</view>    
+      </view>
+    </view>
+  </view>
+  <view class="points-wrap">
+    <view class="head flex-space-between">
+      <view class="common-sub-title">我的积分</view>
+      <view class="font-24 theme-color">积分记录</view>
+    </view>
+    <view class="content">
+      <image src="../../images/icon/points-active-icon.png"/>
+      <text>35000</text>
+    </view>
+  </view>
+  <view class="order-wrap">
+    <view class="head flex-space-between">
+      <view class="common-sub-title">我的订单</view>
+    </view>
+    <view class="content">
+      <view class="order-item">
+        <view class="num theme-color">1<text>个</text></view>
+        <view>待领取</view>
+      </view>
+      <view class="order-item">
+        <view class="num">5<text>个</text></view>
+        <view>已领取</view>
+      </view>
+    </view>
+      
+  </view>
+</view>
+  

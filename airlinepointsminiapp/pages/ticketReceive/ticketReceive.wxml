@@ -1,0 +1,31 @@
+<!-- pages/ticketReceive/ticketReceive.wxml -->
+<view class="container">
+    <image class="backImage" src="/images/icon/ticketReceiveBackImage.png" mode="widthFix"></image>
+    <button class="backBtn" bind:tap="backBtnDidTapped">
+        <image src="/images/icon/rightArrow_white.png" mode="aspectFit"></image>
+        <text>首页</text>
+    </button>
+    <view class="receiveTitle">发现一张优惠券：</view>
+    <view class="ticketBox">
+        <view style="display: flex;">
+            <!-- <image class="ticketImage" src="{{fileBaseUrl + ticketInfo.fileUrl}}" mode="aspectFit"></image> -->
+            <ticketTemp  class="ticketImage" style="position: relative" ticketType='{{ticketInfo.ticketType}}' ticketNumber='{{ticketInfo.ticketPrice}}'></ticketTemp>
+      
+            <view class="titleDesBox">
+                <view class="title">{{ticketInfo.ticketName}}</view>
+                <view class="des">该产品为石榴研习院专用，使用范围的最终解释权归石榴研习院所有</view>
+            </view>
+        </view>
+        <button class="sbmitBtn {{!isViable ? 'sbmitBtnDisabaled' : ''}}" bind:tap="submitBtnDidTapped" disabled="{{!isViable}}"> {{isViable ? '立即领取' : '已被领取'}}</button>
+    </view>
+</view>
+<my-modal id="myModal" onlyConfirm confirmText="我知道了" autoHide confirmStyle="color: #888888;" bind:toParentConfirm="handleModeConfirm">
+    <view class="modal-content">
+        <image class="modalIcon" src="{{isSucces ? '/images/icon/success-icon.png' : '/images/icon/error-icon.png'}}" mode="aspectFit"></image>
+        <view class="modalTitle">{{isSucces ? "领取成功" : "领取失败"}}</view>
+        <view wx:if="{{isSucces}}" style="margin-top: 30rpx;">
+            <text class="modalDes ticketName">{{ticketInfo.ticketName}}</text>
+            <text class="modalDes">已放入你的卡券 请在 【我的】-【卡券】中查看</text>
+        </view>
+    </view>
+</my-modal>

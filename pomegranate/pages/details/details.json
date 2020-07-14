@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "swiper-component": "/components/swiper-component/swiper-component",
+    "segmentedBar": "../../components/common/segmentedBar/segmentedBar",
+    "ske-details": "../../components/skeleton/ske-details/ske-details"
+  },
+  "navigationBarTitleText": "详情"
+}

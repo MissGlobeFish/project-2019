@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "segmentedBar": "/components/common/segmentedBar/segmentedBar",
+    "store-cell": "/components/store-cell/store-cell",
+    "trolley-cell": "/components/trolley-cell/trolley-cell",
+    "i-badge": "/dist/badge/index",
+    "shopSheet": "/components/shopSheet/shopSheet"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "商城"
+}

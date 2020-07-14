@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-modal": "../common/modal/modal",
+    "ticketTemp": "/components/ticketTemp/ticketTemp"
+  }
+}

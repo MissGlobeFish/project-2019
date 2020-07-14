@@ -1,0 +1,32 @@
+/* components/common/form-input/form-input.wxss */
+.input-item {
+
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.input-item input {
+  padding: 30rpx 20rpx;
+  width: 100%;
+}
+.errorStyle {
+  border-bottom: 1px solid red;
+}
+.disabled-text {
+  width: 160rpx;
+  color: #808080;
+  line-height: 2;
+}
+.border-none {
+  border: none
+}
+.send-code {
+  font-size:12px;
+  width:120px;
+  padding:0;
+  line-height: 1;
+  background:transparent !important;
+  color: #808080;
+}

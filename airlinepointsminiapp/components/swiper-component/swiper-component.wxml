@@ -1,0 +1,38 @@
+<!--components/swiper-component.wxml-->
+<view style="position: relative">
+  <swiper
+    style="height: 360rpx;"
+    indicator-dots = "{{false}}"
+    indicator-color = "rgba(255, 255, 255, .5)"
+    indicator-active-color="rgba(255, 255, 255, 1)"
+    autoplay
+    interval = "{{5000}}"
+    duration = "{{500}}"
+    circular
+    bindchange = "swiperchange"
+  >
+  <block wx:for = "{{imgUrls}}" wx:key = "{{index}}">
+    <swiper-item class = "swiper-item">
+      <image src = "{{item}}" class = "slide-image"/>
+    </swiper-item>
+  </block>
+  </swiper>
+  <view class="dot-wrap">
+    <block wx:for = "{{imgUrls}}" wx:key = "{{index}}">
+      <view class="dot-item {{index == currentIndex ? 'active-color' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<!-- <swiper 
+  previous-margin='50px' 
+  next-margin='50px' 
+  bindchange="swiperChange" 
+  style='height: 360rpx'>
+  <swiper-item wx:for='{{imgList}}' wx:key=''>
+    <image 
+      class='le-img {{nowIdx==index?"le-active":""}}' 
+      bindload='getHeight' 
+      src='{{item}}' 
+      style='height:{{swiperH}};'></image>
+  </swiper-item>
+</swiper> -->

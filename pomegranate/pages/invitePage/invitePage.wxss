@@ -1,0 +1,150 @@
+/* pages/invitePage/invitePage.wxss */
+#shareImg {
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top: 0;
+  left: 700px;
+  /* z-index: 9999; */
+  background-color: #000;
+}
+.share{
+  position: absolute;
+  bottom: 100rpx;
+  width: 70%;
+  left: 15%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.preview {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.9);
+  position: absolute;
+  z-index: 100;
+}
+.preview image{
+  width: 70%;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  z-index: 3;
+  border: 1px dashed #fff;
+}
+.preview button{
+  width: 40%;
+  position: absolute;
+  bottom: 150rpx;
+  left: 30%;
+  
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.invitBackImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+/* 邀请函 */
+.ticketBox {
+    position: relative;
+    z-index: 99;
+    width: 682rpx;
+    height: 803rpx;
+    margin-top: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inviteTicketImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.qrcodeBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 303rpx;
+    height: 303rpx;
+    margin-top: 301rpx;
+    z-index: 99;
+}
+.avatar {
+    position: absolute;
+    width: 97rpx;
+    height: 97rpx;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 999;
+    border: 5rpx solid #fff;
+}
+.inviteLabel {
+    z-index: 99;
+    margin-top: 20rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(50,50,50,1);
+}
+
+
+.inviteText {
+    z-index: 99;
+    margin-top: -13rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Semibold; 
+    color:rgba(155,128,104,1);
+}
+
+.inviteText::after{
+    display: inline-block;
+    content: '';
+    width:36rpx;
+    border-top:1px solid rgba(155,128,104,1);
+    vertical-align: middle;
+}
+.inviteText::before{
+    display: inline-block;
+    content: '';
+    width:36rpx;
+    border-top:1px solid rgba(155,128,104,1);
+    vertical-align: middle;
+}
+
+
+
+.shareBtnBox {
+    z-index: 99;
+    margin-top: 40rpx;
+    display: flex;
+}
+.shareBtn {
+    line-height: 1;
+    padding-left: 0;
+    padding-right: 0;
+}
+.shareBtn:last-child {
+    margin-left: 204rpx;
+}
+
+.btnLogo {
+    width: 100rpx;
+    height: 100rpx;
+}
+.btnText {
+    margin-top: 21rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Semibold;
+    color:rgba(155,128,104,1);
+}

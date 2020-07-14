@@ -1,0 +1,10 @@
+<!--components/ticketTemplate/ticketTemplate.wxml-->
+
+<view class="ticketBack" hover-class="none" hover-stop-propagation="false">
+    <image class="ticketImage" src="{{ ticketImage }}" mode="aspectFit"></image>
+    <view class="ticketTitleBox" wx:if="{{ticketType == 'D1' || ticketType == 'D2'}}" hover-class="none" hover-stop-propagation="false">
+        <text class="ticketTitle" style="font-size: {{titleBoxWith * 0.31}}px" >{{ticketNumber * (ticketType == 'D1' ? 10 : 1)}}</text>
+        <text class="ticketTitle" style="font-size: {{titleBoxWith * 0.16}}px">{{ ticketType == 'D1' ? '折' : '元' }}</text>
+    </view>
+
+</view>

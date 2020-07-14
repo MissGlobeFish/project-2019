@@ -1,0 +1,324 @@
+{
+  "trailData": [
+    {
+      "type": "selfDevelop",
+      "content": "入职",
+      "timestamp": "2018-02-28",
+      "size": "large",
+      "color": "#0bbd87"
+    }, {
+      "type": "selfDevelop",
+      "content": "转正",
+      "timestamp": "2018-05-28",
+      "size": "large",
+      "color": "#0bbd87"
+    }, {
+      "type": "leave",
+      "content": "调休(1天)",
+      "timestamp": "2018-05-31",
+      "size": "large",
+      "color": "#0bbd87"
+    }, {
+      "type": "leave",
+      "content": "病假",
+      "timestamp": "2018-10-18",
+      "size": "large",
+      "color": "#0bbd87"
+  }, {
+      "type": "selfDevelop",
+      "content": "调岗  调岗至华西大区",
+      "timestamp": "2019-05-12",
+      "size": "large",
+      "color": "#0bbd87"
+  }, {
+      "type": "selfDevelop",
+      "content": "晋升实习军团长",
+      "timestamp": "2019-6-18",
+      "size": "large",
+      "color": "#0bbd87"
+  }, {
+      "type": "leave",
+      "content": "年假(5天)",
+      "timestamp": "2019-7-11",
+      "size": "large",
+      "color": "#0bbd87"
+  }, {
+      "type": "honor",
+      "content": "荣誉  获取成都市十佳销售",
+      "timestamp": "2019-7-12",
+      "size": "large",
+      "color": "#0bbd87"
+    }, {
+      "type": "honor",
+      "content": "荣誉  评委成都市就业协会成员",
+      "timestamp": "2019-8-15",
+      "size": "large",
+      "color": "#0bbd87"
+    }, {
+      "type": "leave",
+      "content": "事假(1天)",
+      "timestamp": "2019-8-16",
+      "size": "large",
+      "color": "#0bbd87"
+    },{
+      "type": "honor",
+      "content": "荣誉 成都地产声优评委",
+      "timestamp": "2019-8-26",
+      "size": "large",
+      "color": "#0bbd87"
+    },{
+      "type": "honor",
+      "content": "荣誉 行业最具潜力导师奖",
+      "timestamp": "2019-8-29",
+      "size": "large",
+      "color": "#0bbd87"
+    },{
+      "type": "honor",
+      "content": "荣誉 行业最具潜力导师奖",
+      "timestamp": "2019-8-29",
+      "size": "large",
+      "color": "#0bbd87"
+    }
+  ],
+  "dataList": [
+    {
+     "empCode": "TS0001",
+     "accountName": "成都分部",
+     "empName": "李震",
+     "gender": "男",
+     "nationDesc": "汉",
+     "lastHireDate": "2018-02-28",
+     "lastFormalDate": "2018-05-28",
+     "jobDesc": "销售",
+     "cityDesc": "成都",
+     "formalDesc": "在职"
+    },
+    {
+      "empCode": "TS0002",
+      "accountName": "成都米莱公司",
+      "empName": "闻子安",
+      "gender": "男",
+      "nationDesc": "汉",
+      "lastHireDate": "2018-02-28",
+      "lastFormalDate": "2018-05-28",
+      "jobDesc": "销售",
+      "cityDesc": "成都",
+      "formalDesc": "在职"
+     },
+     {
+      "empCode": "TS0003",
+      "accountName": "成都分部",
+      "empName": "常平惠",
+      "gender": "男",
+      "nationDesc": "汉",
+      "lastHireDate": "2017-01-28",
+      "lastFormalDate": "2017-04-28",
+      "jobDesc": "销售",
+      "cityDesc": "成都",
+      "formalDesc": "在职"
+     },
+     {
+      "empCode": "TS0004",
+      "accountName": "上海分部",
+      "empName": "汤凡霜",
+      "gender": "女",
+      "nationDesc": "汉",
+      "lastHireDate": "2016-07-02",
+      "lastFormalDate": "2016-10-10",
+      "jobDesc": "销售",
+      "cityDesc": "上海",
+      "formalDesc": "在职"
+     },
+     {
+       "empCode": "TS0005",
+       "accountName": "成都分部",
+       "empName": "普友槐",
+       "gender": "男",
+       "nationDesc": "汉",
+       "lastHireDate": "2019-01-28",
+       "lastFormalDate": "2019-04-1",
+       "jobDesc": "销售",
+       "cityDesc": "成都",
+       "formalDesc": "在职"
+      },
+      {
+       "empCode": "TS0006",
+       "accountName": "上海总部",
+       "empName": "翟丹蝶",
+       "gender": "女",
+       "nationDesc": "汉",
+       "lastHireDate": "2019-06-18",
+       "lastFormalDate": "2019-09-15",
+       "jobDesc": "BP",
+       "cityDesc": "上海",
+       "formalDesc": "在职"
+      },
+      {
+        "empCode": "TS0007",
+        "accountName": "成都分部",
+        "empName": "奕夏兰",
+        "gender": "男",
+        "nationDesc": "汉",
+        "lastHireDate": "2019-02-12",
+        "lastFormalDate": "2019-05-11",
+        "jobDesc": "销售",
+        "cityDesc": "成都",
+        "formalDesc": "离职"
+       },
+       {
+         "empCode": "TS0008",
+         "accountName": "北京分部",
+         "empName": "马含",
+         "gender": "男",
+         "nationDesc": "汉",
+         "lastHireDate": "2017-01-28",
+         "lastFormalDate": "2017-04-01",
+         "jobDesc": "销售",
+         "cityDesc": "北京",
+         "formalDesc": "在职"
+        },
+        {
+         "empCode": "TS0009",
+         "accountName": "成都分部",
+         "empName": "汤凡霜",
+         "gender": "男",
+         "nationDesc": "汉",
+         "lastHireDate": "2018-04-12",
+         "lastFormalDate": "2018-07-11",
+         "jobDesc": "销售",
+         "cityDesc": "成都",
+         "formalDesc": "在职"
+        },
+        {
+         "empCode": "TS0010",
+         "accountName": "成都分部",
+         "empName": "候腾骞",
+         "gender": "男",
+         "nationDesc": "汉",
+         "lastHireDate": "2018-05-11",
+         "lastFormalDate": "2018-07-23",
+         "jobDesc": "销售",
+         "cityDesc": "成都",
+         "formalDesc": "在职"
+        },{
+          "empCode": "TS0011",
+          "accountName": "武汉分部",
+          "empName": "卫尔阳",
+          "gender": "男",
+          "nationDesc": "汉",
+          "lastHireDate": "2016-09-28",
+          "lastFormalDate": "2018-11-11",
+          "jobDesc": "销售",
+          "cityDesc": "武汉",
+          "formalDesc": "在职"
+      },
+      {
+        "empCode": "TS0012",
+        "accountName": "武汉分部",
+        "empName": "吴之卉",
+        "gender": "女",
+        "nationDesc": "汉",
+        "lastHireDate": "2016-02-28",
+        "lastFormalDate": "2016-05-28",
+        "jobDesc": "产品助理",
+        "cityDesc": "武汉",
+        "formalDesc": "离职"
+       },
+       {
+         "empCode": "TS0013",
+         "accountName": "成都分部",
+         "empName": "李昊天",
+         "gender": "男",
+         "nationDesc": "汉",
+         "lastHireDate": "2017-07-07",
+         "lastFormalDate": "2017-09-21",
+         "jobDesc": "产品助理",
+         "cityDesc": "成都",
+         "formalDesc": "在职"
+        },
+        {
+         "empCode": "TS0014",
+         "accountName": "成都分部",
+         "empName": "奚昶",
+         "gender": "男",
+         "nationDesc": "汉",
+         "lastHireDate": "2018-01-17",
+         "lastFormalDate": "2018-04-7",
+         "jobDesc": "销售",
+         "cityDesc": "成都",
+         "formalDesc": "在职"
+        },
+        {
+         "empCode": "TS0015",
+         "accountName": "成都分部",
+         "empName": "倪碧曼",
+         "gender": "女",
+         "nationDesc": "汉",
+         "lastHireDate": "2017-12-15",
+         "lastFormalDate": "2018-05-28",
+         "jobDesc": "销售",
+         "cityDesc": "成都",
+         "formalDesc": "在职"
+        },
+        {
+          "empCode": "TS0016",
+          "accountName": "深圳总部",
+          "empName": "赫千秋",
+          "gender": "男",
+          "nationDesc": "汉",
+          "lastHireDate": "2014-05-28",
+          "lastFormalDate": "2014-07-28",
+          "jobDesc": "销售主管",
+          "cityDesc": "深圳",
+          "formalDesc": "在职"
+         },
+         {
+           "empCode": "TS0017",
+           "accountName": "北京分部",
+           "empName": "晋依辰",
+           "gender": "男",
+           "nationDesc": "汉",
+           "lastHireDate": "2018-07-08",
+           "lastFormalDate": "2018-10-28",
+           "jobDesc": "销售",
+           "cityDesc": "北京",
+           "formalDesc": "在职"
+          },
+          {
+            "empCode": "TS0018",
+            "accountName": "成都分部",
+            "empName": "计瑶",
+            "gender": "女",
+            "nationDesc": "汉",
+            "lastHireDate": "2019-01-25",
+            "lastFormalDate": "2019-04-02",
+            "jobDesc": "人力行政",
+            "cityDesc": "成都",
+            "formalDesc": "在职"
+           },
+           {
+            "empCode": "TS0019",
+            "accountName": "武汉分部",
+            "empName": "李修昂",
+            "gender": "男",
+            "nationDesc": "汉",
+            "lastHireDate": "2017-03-03",
+            "lastFormalDate": "2017-05-28",
+            "jobDesc": "IT支持",
+            "cityDesc": "武汉",
+            "formalDesc": "在职"
+           },
+           {
+            "empCode": "TS0020",
+            "accountName": "武汉分部",
+            "empName": "闻子安",
+            "gender": "男",
+            "nationDesc": "汉",
+            "lastHireDate": "2015-04-08",
+            "lastFormalDate": "2015-05-28",
+            "jobDesc": "销售",
+            "cityDesc": "武汉",
+            "formalDesc": "在职"
+           }
+  ]
+}

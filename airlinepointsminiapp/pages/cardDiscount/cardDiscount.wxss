@@ -1,0 +1,29 @@
+/* pages/cardDiscount/cardDiscount.wxss */
+.container {
+  /* margin: 0 20px; */
+  margin-bottom: 40rpx;
+}
+.null-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.null-data>image {
+  width: 363rpx;
+  height: 276rpx;
+  margin-top: 163rpx;
+}
+.null-data .msg {
+  color: #808080;
+  font-size: 32rpx;
+  margin-top: 80rpx;
+}
+
+.loader-more {
+  padding:20rpx 0;
+  text-align:center;
+  color:#808080;
+  font-size:26rpx;
+}

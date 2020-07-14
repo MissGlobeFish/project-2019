@@ -1,0 +1,13 @@
+<!--components/common/modal/modal.wxml-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}" catchtouchmove="preventTouchMove">
+  <slot></slot>
+  <!-- <view class="modal-content">
+    <slot></slot> -->
+    <!-- <view class="modal-text">卡密：KL564143258</view> -->
+  <!-- </view> -->
+  <view class="modal-footer" wx:if="{{showFooter}}"> 
+    <view class="btn-cancel" wx:if="{{!onlyConfirm}}" style="{{cancelStyle}}" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" style="{{confirmStyle + (onlyConfirm ? 'width: 100%;' : '')}}" bindtap="onConfirm" data-status="confirm">{{confirmText}}</view>
+  </view>
+</view>

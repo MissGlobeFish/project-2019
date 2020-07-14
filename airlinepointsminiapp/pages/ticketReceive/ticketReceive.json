@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-modal": "/components/common/modal/modal",
+    "ticketTemp": "/components/ticketTemp/ticketTemp"
+  },
+  "navigationBarTitleText": "领取优惠券"
+}

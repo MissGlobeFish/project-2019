@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>员工管理BI</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Optometry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //for-mobile-apps -->
+	<link href="../asset/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../asset/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../asset/css/csshake.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../asset/bootstrapTable/bootstrap-table.min.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script src="../asset/js/jquery-1.11.1.min.js"></script>
+	<!-- //js -->
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<style>
+		.table td, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+			padding: 1px !important;
+		}
+
+		.testimonials, .blog, .typo, .featured-services, .sevices, .contact {
+			padding:0;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						<div class="logo">
+							<a class="navbar-brand" href="#">员工管理BI</a>
+						</div>
+					</div>
+
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- contact -->
+	<hr/>
+	<div class="contact">
+		<div class="container" style="margin-bottom:30px;">
+			<table id="table"></table>
+		</div>
+		<div class="container">
+			<div class="col-md-6 contact-left">
+				<div id="employee" style="height:400px;"></div>
+				<hr/>
+				<div id="gender" style="height:400px;"></div>
+				<hr/>
+				<div id="company_age" style="height:400px;"></div>
+			</div>
+			<div class="col-md-6 contact-left" style="min-height:480px;">
+				<div id="age" style="height:400px;"></div>
+				<hr/>
+				<div id="marital" style="height:400px;"></div>
+				<hr/>
+				<div id="education" style="height:400px;"></div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- footer -->
+
+	<div class="copy">
+		<div class="container">
+			<p>Copyright &copy; 2018.guoshengtianfeng All rights reserved.More Templates</p>
+		</div>
+	</div>
+	<!--//footer-->
+	<!-- for bootstrap working -->
+	<script src="../asset/bootstrapTable/bootstrap-table.js">
+	<script src="../asset/js/bootstrap.js">
+	</script>
+	<script src="../asset/js/echarts.js">
+	</script>
+	<script>
+		var _myChart_employee = echarts.init(document.getElementById('employee'));
+		var _myChart_gender = echarts.init(document.getElementById('gender'));
+		var _myChart_age = echarts.init(document.getElementById('age'));
+		var _myChart_marital = echarts.init(document.getElementById('marital'));
+		var _myChart_company_age = echarts.init(document.getElementById('company_age'));
+		var _myChart_education = echarts.init(document.getElementById('education'));
+		var _url = "http://dev.source3g.com:15003/humres";
+		// var _url = "http://localhost:8080/humres";
+
+		$.ajax({
+			type: "GET", //提交方式
+			url: _url+"/statistics/distribution/education", //路径
+			data: {}, //数据，这里使用的是Json格式进行传输
+			success: function(data) { //返回数据根据结果进行相应的处理
+				if (data.flag) {
+					$.each(data.data, function(i, p) {
+						_option_education.legend.data[i] = p.name;
+						_option_education.series[0].data[i] = p;
+					});
+					// 使用刚指定的配置项和数据显示图表。
+					_myChart_education.setOption(_option_education);
+				} else {
+
+				}
+			}
+		});
+
+		$.ajax({
+			type: "GET", //提交方式
+			url: _url+"/statistics/distribution/companyAge", //路径
+			data: {}, //数据，这里使用的是Json格式进行传输
+			success: function(data) { //返回数据根据结果进行相应的处理
+				if (data.flag) {
+					$.each(data.data, function(i, p) {
+						_option_company_age.legend.data[i] = p.name;
+						_option_company_age.series[0].data[i] = p;
+					});
+					// 使用刚指定的配置项和数据显示图表。
+					_myChart_company_age.setOption(_option_company_age);
+				} else {
+
+				}
+			}
+		});
+
+		$.ajax({
+			type: "GET", //提交方式
+			url: _url+"/statistics/distribution/employee", //路径
+			data: {}, //数据，这里使用的是Json格式进行传输
+			success: function(data) { //返回数据根据结果进行相应的处理
+				if (data.flag) {
+					$.each(data.data, function(i, p) {
+						_option_employee.legend.data[i] = p.name;
+						_option_employee.series[0].data[i] = p;
+					});
+					// 使用刚指定的配置项和数据显示图表。
+					_myChart_employee.setOption(_option_employee);
+				} else {
+
+				}
+			}
+		});
+
+		$.ajax({
+			type: "GET", //提交方式
+			url: _url+"/statistics/distribution/gender", //路径
+			data: {}, //数据，这里使用的是Json格式进行传输
+			success: function(data) { //返回数据根据结果进行相应的处理
+				if (data.flag) {
+					$.each(data.data, function(i, p) {
+						_option_gender.legend.data[i] = p.name;
+						_option_gender.series[0].data[i] = p;
+					});
+					// 使用刚指定的配置项和数据显示图表。
+					_myChart_gender.setOption(_option_gender);
+				} else {
+
+				}
+			}
+		});
+
+		$.ajax({
+			type: "GET", //提交方式
+			url: _url+"/statistics/distribution/age", //路径
+			data: {}, //数据，这里使用的是Json格式进行传输
+			success: function(data) { //返回数据根据结果进行相应的处理
+				if (data.flag) {
+					$.each(data.data, function(i, p) {
+						_option_age.legend.data[i] = p.name;
+						_option_age.series[0].data[i] = p;
+					});
+					// 使用刚指定的配置项和数据显示图表。
+					_myChart_age.setOption(_option_age);
+				} else {
+
+				}
+			}
+		});
+
+		$.ajax({
+			type: "GET", //提交方式
+			url: _url+"/statistics/distribution/marital", //路径
+			data: {}, //数据，这里使用的是Json格式进行传输
+			success: function(data) { //返回数据根据结果进行相应的处理
+				if (data.flag) {
+					$.each(data.data, function(i, p) {
+						_option_marital.legend.data[i] = p.name;
+						_option_marital.series[0].data[i] = p;
+					});
+					// 使用刚指定的配置项和数据显示图表。
+					_myChart_marital.setOption(_option_marital);
+				} else {
+
+				}
+			}
+		});
+
+
+		_option_employee = {
+			title: {
+				text: '在职员工部门分布',
+				subtext: '',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: []
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					mark: {
+						show: true
+					},
+					dataView: {
+						show: true,
+						readOnly: false
+					},
+					magicType: {
+						show: true,
+						type: ['pie', 'funnel'],
+						option: {
+							funnel: {
+								x: '25%',
+								width: '50%',
+								funnelAlign: 'left',
+								max: 1548
+							}
+						}
+					},
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			calculable: true,
+			series: [{
+				name: '部门',
+				type: 'pie',
+				radius: '55%',
+				center: ['60%', '60%'],
+				data: []
+			}]
+		};
+
+
+		_option_gender = {
+			title: {
+				text: '在职员工部门分布',
+				subtext: '',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: []
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					mark: {
+						show: true
+					},
+					dataView: {
+						show: true,
+						readOnly: false
+					},
+					magicType: {
+						show: true,
+						type: ['pie', 'funnel'],
+						option: {
+							funnel: {
+								x: '25%',
+								width: '50%',
+								funnelAlign: 'left',
+								max: 1548
+							}
+						}
+					},
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			calculable: true,
+			series: [{
+				name: '部门',
+				type: 'pie',
+				radius: '55%',
+				center: ['60%', '60%'],
+				data: []
+			}]
+		};
+
+		_option_age = {
+			title: {
+				text: '员工年龄分布',
+				subtext: '',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: []
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					mark: {
+						show: true
+					},
+					dataView: {
+						show: true,
+						readOnly: false
+					},
+					magicType: {
+						show: true,
+						type: ['pie', 'funnel'],
+						option: {
+							funnel: {
+								x: '25%',
+								width: '50%',
+								funnelAlign: 'left',
+								max: 1548
+							}
+						}
+					},
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			calculable: true,
+			series: [{
+				name: '年龄段',
+				type: 'pie',
+				radius: '55%',
+				center: ['60%', '60%'],
+				data: []
+			}]
+		};
+
+
+		_option_marital = {
+			title: {
+				text: '婚姻状况',
+				subtext: '',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: []
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					mark: {
+						show: true
+					},
+					dataView: {
+						show: true,
+						readOnly: false
+					},
+					magicType: {
+						show: true,
+						type: ['pie', 'funnel'],
+						option: {
+							funnel: {
+								x: '25%',
+								width: '50%',
+								funnelAlign: 'left',
+								max: 1548
+							}
+						}
+					},
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			calculable: true,
+			series: [{
+				name: '婚姻情况',
+				type: 'pie',
+				radius: '55%',
+				center: ['60%', '60%'],
+				data: []
+			}]
+		};
+
+		_option_company_age = {
+			title: {
+				text: '司龄情况',
+				subtext: '',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: []
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					mark: {
+						show: true
+					},
+					dataView: {
+						show: true,
+						readOnly: false
+					},
+					magicType: {
+						show: true,
+						type: ['pie', 'funnel'],
+						option: {
+							funnel: {
+								x: '25%',
+								width: '50%',
+								funnelAlign: 'left',
+								max: 1548
+							}
+						}
+					},
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			calculable: true,
+			series: [{
+				name: '司龄段',
+				type: 'pie',
+				radius: '55%',
+				center: ['60%', '60%'],
+				data: []
+			}]
+		};
+
+		_option_education = {
+			title: {
+				text: '学历状况',
+				subtext: '',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: []
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					mark: {
+						show: true
+					},
+					dataView: {
+						show: true,
+						readOnly: false
+					},
+					magicType: {
+						show: true,
+						type: ['pie', 'funnel'],
+						option: {
+							funnel: {
+								x: '25%',
+								width: '50%',
+								funnelAlign: 'left',
+								max: 1548
+							}
+						}
+					},
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			calculable: true,
+			series: [{
+				name: '学历',
+				type: 'pie',
+				radius: '55%',
+				center: ['60%', '60%'],
+				data: []
+			}]
+		};
+
+
+		$("#table").bootstrapTable({
+            dataType: "json",
+            method: 'get',
+            contentType: "application/json",
+            cache: false,
+            url: _url+ "/statistics/details",
+            columns:[
+                [
+                    {
+                        field: 'value2',
+                        title: "部门名称",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 1,
+                        rowspan: 2,
+												width:10
+                    },
+                    {
+												field: 'value3',
+                        title: "负责人",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 1,
+                        rowspan: 2
+                    },
+                    {
+												field: 'value4',
+                        title: "在职",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 1,
+                        rowspan: 2
+                    },
+                    {
+											  field: 'value25',
+                        title: "实习生",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 1,
+                        rowspan: 2
+                    },
+                    {
+											  field: 'value27',
+                        title: "转正",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 1,
+                        rowspan: 2
+                    },
+                    {
+											  field: 'value26',
+                        title: "未转正",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 1,
+                        rowspan: 2
+                    },
+                    {
+                        title: "性别",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 2,
+                        rowspan: 1
+                    },
+                    {
+                        title: "婚姻状况",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 2,
+                        rowspan: 1
+                    },
+                    {
+                        title: "年龄结构",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 5,
+                        rowspan: 1
+                    },
+                    {
+                        title: "文化结构",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 6,
+                        rowspan: 1
+                    },
+                    {
+                        title: "司龄",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 3,
+                        rowspan: 1
+                    },
+                    {
+                        title: "籍贯",
+                        valign:"middle",
+                        align:"center",
+                        colspan: 3,
+                        rowspan: 1
+                    }
+                ],
+                [
+                    {
+                        field: 'value7',
+                        title: '男',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value8',
+                        title: '女',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value5',
+                        title: '未婚',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value6',
+                        title: '已婚',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value9',
+                        title: '<20',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value10',
+                        title: '21-25',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value11',
+                        title: '26-30',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value12',
+                        title: '31-35',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value13',
+                        title: '>35',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value14',
+                        title: '硕士以上',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value15',
+                        title: '本科',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value16',
+                        title: '大专',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value18',
+                        title: '高中',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value17',
+                        title: '中专',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value19',
+                        title: '初中',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value20',
+                        title: '<1',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value21',
+                        title: '1-3',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value22',
+                        title: '4-6',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value23',
+                        title: '省内',
+                        valign:"middle",
+                        align:"center"
+                    },
+                    {
+                        field: 'value24',
+                        title: '省外',
+                        valign:"middle",
+                        align:"center"
+                    }
+                ]
+            ]
+        })
+	</script>
+	<!-- //for bootstrap working -->
+</body>
+
+</html>

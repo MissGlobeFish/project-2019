@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-modal": "/components/common/modal/modal"
+  },
+  "navigationBarTitleText": "确认订单"
+}

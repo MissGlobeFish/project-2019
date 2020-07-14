@@ -1,0 +1,8 @@
+<!--pages/points/apply-list/apply-list.wxml-->
+<view class="container">
+    <view wx:for="{{listData}}" wx:key="{{item}}">
+      <check-item item="{{item}}"></check-item>
+    </view>
+      
+</view>
+  

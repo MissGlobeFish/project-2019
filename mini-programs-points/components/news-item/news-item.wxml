@@ -1,0 +1,22 @@
+<!--components/news-item/news-item.wxml-->
+<view class="container">
+<!-- 文字描述 -->
+  <view class="text-part">
+    <view class="top">
+      <view class="icon" wx:if="{{item.isNotice}}">通知</view>
+      <view class="title">{{item.title}}</view>
+    </view>
+    <view class="bottom">
+      <view class="time sub-color font-24">{{item.time}}</view>
+      <view class="author sub-color font-24">{{item.author}}</view>
+      <view class="likes sub-color font-24">{{item.likes}}次赞</view>
+    </view>
+  </view>
+
+  <!-- 图片描述 -->
+  <view class="img-part">
+    <image class="" src="https://dimg04.c-ctrip.com/images/300a0h0000008t2i8B39A_C_228_170.jpg" mode="aspectFill"/>
+  </view>
+    
+</view>
+  

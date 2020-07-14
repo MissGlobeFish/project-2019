@@ -1,0 +1,5 @@
+<!-- pages/pointsRule/pointsRule.wxml -->
+<view class="typeBox">
+    <text class="typeBoxTitle">研值规则</text>
+    <text class="rightText">{{ruleDes}}</text>
+</view>

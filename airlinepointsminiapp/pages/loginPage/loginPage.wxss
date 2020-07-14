@@ -1,0 +1,63 @@
+/* pages/loginPage/loginPage.wxss */
+
+.container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    background-color: #fff;
+    align-items: center;
+    padding: 40rpx;
+}
+.loginLogo {
+    width: 320rpx;
+    height: 293rpx;
+    margin-top: 13%;
+}
+.loginBtn {
+    margin-top: 120rpx;
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:110rpx;
+    width:84%;
+    height:110rpx;
+    background:rgba(14,193,22,1);
+    border-radius:4px;
+}
+
+.inputTitle {
+    margin-top: 40rpx;
+    margin-bottom: 30rpx;
+    font-size:24px;
+    width: 100%;
+    text-align: left;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(53,53,53,1);
+}
+.container>form-input {
+    width: 100%
+}
+.submitBtn {
+    margin-top: 70rpx;
+    width: 100%;
+    height:110rpx;
+    border-radius:4px;
+    font-size:16px;
+    font-family:PingFangSC-Regular;
+    line-height:110rpx;
+}
+
+.submitBtnOk {
+    background:linear-gradient(90deg,rgba(255,63,63,1) 0%,rgba(253,97,97,1) 100%);
+    box-shadow:0px 9px 21px 0px rgba(240,61,61,0.47);
+}
+.submitBtnDisabled {
+    background:rgba(200,200,200,1);
+}
+.button[disabled][type="default"],wx-button[disabled]:not([type]) {
+    background:rgba(200,200,200,1);
+}

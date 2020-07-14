@@ -1,0 +1,39 @@
+<!-- 创建组件 -->
+<wxs module="courseWxs" src="../../wxParse/filter.wxs"></wxs>
+<view class="course-cell" wx:for="{{courseList}}" wx:key="{{index}}">
+  <navigator url="../../pages/details/details?id={{item.lessonId}}" hover-class="none"> 
+    <view class="top">
+      <view class="pic-wrap">
+        <image src="{{fileBaseUrl+item.titlePageImg}}" mode="aspectFill"></image>
+        <view class="sub-icon color-3}}">{{item.courseName}}</view>
+      </view>
+      <view class="info-wrap">
+        <view class="right-top">
+          <view class="info-item info-sub">
+            {{item.title }}
+          </view>
+          <view class="info-item item-text">
+            <image src="../../images/icon/teacher-icon.png" class="icon-pic"></image>
+            <text class="font-24">{{item.tnames}}</text>
+          </view>
+          <view class="info-item item-text" style="display:flex;align-items:center;">
+            <image src="../../images/icon/time-icon.png" class="icon-pic"></image>
+            <text class="font-24">{{item.courseDate}} {{item.courseStartTime}}-{{item.courseEndTime}}</text>
+            <!-- 课程活动icon -->
+            <image wx:if="{{item.courseType == 'C1' }}" src="../../images/icon/kecheng.png" style="width:60rpx;height:28rpx;margin-left:30rpx"></image>
+            <image wx:else src="../../images/icon/huodong.png" style="width:60rpx;height:28rpx;margin-left:30rpx"></image>
+          </view>
+        </view>
+        <view class="right-bottom">
+          <view class="info-item item-text">{{item.signUpNum}}人已报名</view>
+          <button class="btn disable-btn"
+            wx:if = "{{courseWxs.courseStatus(item.courseDate,item.courseStartTime)}}"
+          >已结束</button>
+          <button class="btn"
+            wx:else
+          >报名</button>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>

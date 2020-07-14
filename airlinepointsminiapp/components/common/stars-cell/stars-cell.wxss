@@ -1,0 +1,18 @@
+/* components/common/stars-cell/stars-cell.wxss */
+.star-image {
+ 
+ /* position: absolute; */
+ 
+ /* top: 50rpx; */
+ 
+ width: 68rpx;
+ 
+ height: 68rpx;
+ 
+ src: "../../images/icon/normal.png";
+ 
+ 
+}
+.star-image:not(:first-child) {
+  margin-left: 24rpx;
+}

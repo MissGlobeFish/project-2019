@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "swiper": "/components/swiper-component/swiper-component",
+    "news-item-compontent": "/components/news-item/news-item"
+  },
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

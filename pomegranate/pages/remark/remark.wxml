@@ -1,0 +1,32 @@
+<!--pages/remark/remark.wxml-->
+<view class="container">
+  <block>
+    <view class="module stars-wrap">
+      <view class="title font-32">课程打分 <text class="sub-text">(好)</text> </view>
+      <view class="stars">
+        <!-- <i-rate 
+            size="{{34}}"
+            bind:change="onChange" 
+            value="{{starIndex}}">
+        </i-rate> -->
+        <my-rate bind:myevent="starKey" judge="{{judge}}" score="{{datas.score}}"></my-rate>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class="module remark-wrap">
+      <view class="title  font-32">课程评价</view>
+      <view class="textarea">
+      <textarea 
+        disabled="{{judge}}"
+        style = "background-color:{{judge?'#fff':'#f4f4f4'}}"
+        placeholder="请填写评价" bindblur="bindTextAreaBlur"  value="{{datas.reply}}" maxlength="{{100}}"/>
+      </view>
+    </view>
+  </block> 
+  <block>
+    <view class="footer-btn" bindtap='submitRemark' wx:if="{{!judge}}">
+      <button class="font-32">提交</button>
+    </view>
+  </block> 
+</view>

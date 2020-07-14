@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body,#app,.wrapper {
+  height: 100%;
+}
+body{
+  position: relative;
+  font-family:"Helvetica Neue",Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+}
+ul,li,ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  border:0 none;
+  background-color:transparent;
+  cursor:pointer
+} 
+img{
+  vertical-align:top
+} 

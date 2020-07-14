@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shopping/shopping",
+    "pages/my/my",
+    "pages/myInfo/myInfo",
+    "pages/remark/remark",
+    "pages/signProject/signProject",
+    "pages/applyInfo/applyInfo",
+    "pages/payAccount/payAccount",
+    "pages/details/details",
+    "pages/pointsHistory/pointsHistory",
+    "pages/rights/rights",
+    "pages/pointsPay/pointsPay",
+    "pages/cardDiscount/cardDiscount",
+    "pages/cardSelect/cardSelect",
+    "pages/getMember/getMember",
+    "pages/signScan/signScan",
+    "pages/pointsRule/pointsRule",
+    "pages/loginPage/loginPage",
+    "pages/loginUserInfo/loginUserInfo",
+    "pages/pointsPayResult/pointsPayResult",
+    "pages/ticketReceive/ticketReceive",
+    "pages/getMemberPay/getMemberPay",
+    "pages/invitePage/invitePage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "石榴",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#808080",
+    "selectedColor": "#FF3D4B",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/home-icon.png",
+        "selectedIconPath": "images/icon/home-active-icon.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "商城",
+        "iconPath": "images/icon/shopping-icon.png",
+        "selectedIconPath": "images/icon/shopping-active-icon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icon/my-icon.png",
+        "selectedIconPath": "images/icon/my-active-icon.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

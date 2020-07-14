@@ -1,0 +1,14 @@
+<!-- pages/signScan/signScan.wxml -->
+<view class="container">
+    <image wx:if="{{signResult != null }}" class="signResultIcon" src="{{ signResult ? '/images/icon/success-icon.png' : '/images/icon/error-icon.png' }}" mode="aspectFit"></image>
+    <view wx:if="{{ signResult != null }}" class="signResultText">
+        {{ signResult == null ? "" : signResult ? "签到成功" : "签到失败" }}
+    </view>
+     <view wx:if="{{ signResult != null }}" class="desLab">
+        {{ errMassage }}
+    </view>
+
+     <view wx:if="{{ signResult != null }}" class="goBackBtn" bind:tap="goback">返回</view>
+
+    <view wx:if="{{ codeResult == null && signResult == null }}">扫码准备中...</view>
+</view>

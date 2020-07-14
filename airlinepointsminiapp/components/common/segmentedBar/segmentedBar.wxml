@@ -1,0 +1,11 @@
+<!-- components/common/segmentedBar/segmentedBar.wxml -->
+<view>
+  <view class="segmentedBarContainer {{centerDisplay ? 'centerContainer' : 'startContainer'}}">
+    <view wx:for="{{titles}}" wx:for-item="labelName" wx:key="{{index}}" data-index="{{index}}" class='segmentedBarButton' bindtap='didSelectedAtIndex'>
+      <view class="segmentedBarText {{ selectIndex == index ? 'segmentedBarTextSelected' : '' }}">
+        {{labelName}}
+      </view>
+    </view>
+  </view>
+  <view class="selectbar" style="transform:{{transform}}; width: {{barViewWidth}}px; left: {{defaultLeft}}px"></view>
+</view>

@@ -1,0 +1,266 @@
+/* pages/my/my.wxss */
+.containor {
+    background-color: #FFFFFF;
+    padding: 20rpx 30rpx 0 30rpx;
+    position:relative;
+}
+/* 个人信息卡片 */
+.userInfoBox {
+    position:relative;
+    width: 100%;
+    height: 370rpx;
+    background:linear-gradient(90deg,rgba(255,63,63,1) 0%,rgba(253,97,97,1) 100%);
+    box-shadow:0px 9px 21px 0px rgba(240,61,61,0.47);
+    border-radius:40rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.userCardBackIMG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+/* 头像 */
+.userinfo-avatar {
+    position: relative;
+    margin-top: 36rpx;
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 999;
+    border: 10rpx solid #fff;
+    background-color: #fff;
+}
+/* 名称 等级 */
+.userName {
+    margin-top: 30rpx;
+    font-size:40rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    vertical-align: center;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+.userLevel {
+    margin-left: 10rpx;
+    font-size:24rpx;
+    height: 36rpx;
+    font-family:PingFangSC-Medium;
+    color:rgba(255,70,70,1);
+    line-height:36rpx;
+    background:rgba(255,255,255,1);
+    border-radius:18rpx;
+    padding-left: 16rpx;
+    padding-right: 16rpx;
+}
+/* 用户 ID */
+.userIdBtn {
+    position: absolute;
+    left: 25rpx;
+    bottom: 27rpx;
+    text-align: left;
+    font-size:24rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(172,7,7,1);
+    line-height:1;
+    padding: 0;
+}
+
+
+/* 会员标签 */
+.memberInfoBox {
+    position: absolute;
+    right: 0;
+    top: 63rpx;
+    height: 56rpx;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 11px 0px rgba(255,66,66,0.56);
+    border-radius:100px 0px 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 28rpx;
+    padding-right: 28rpx;
+}
+.meberImage {
+    width: 32rpx;
+    height: 29rpx;
+    margin-right: 8rpx;
+}
+.meberLab {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #B57836;
+    padding: 0;
+}
+.nonmeberLab {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #353535;
+    padding: 0;
+}
+
+/* 升级会员 */
+.getMemberBtn {
+    position: absolute;
+    right: 0;
+    top: 140rpx;
+    height: 48rpx;
+    background:linear-gradient(280deg,rgba(218,173,106,0.7) 0%,rgba(242,191,98,0.7) 100%);
+    box-shadow:0px 5px 11px 0px rgba(255,80,80,0.41);
+    border-radius:28rpx 0 0 28rpx;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 28rpx;
+    padding-right: 2rpx;
+}
+.getMemberBtn >text {
+    font-size:28rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    line-height:28rpx;
+}
+.getMemberBtn >image {
+    margin-left: 10rpx;
+    width: 24rpx;
+    height: 24rpx;
+}
+
+
+/* 报名分享 */
+.shareBox {
+    position: relative;
+    margin: 48rpx 10rpx 0 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 147rpx;
+    padding-right: 35rpx;
+    height: 100rpx;
+}
+.shareBox >text {
+    font-size:28rpx;
+    font-family:PingFangSC-Medium;
+    color:rgba(108,77,49,1);
+    line-height:28rpx;
+    z-index: 9;
+}
+.shareBackImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.shareLabel {
+    font-size:28rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(108,77,49,1);
+    line-height:28rpx;
+}
+.shareArrow {
+    margin-left: 22rpx;
+    width: 32rpx;
+    height: 32rpx;
+    z-index: 9;
+}
+
+
+/* 会员卡 券 研值 */
+.innerBtnBox {
+    width: 100%;
+    height: 160rpx;
+    justify-content: center;
+    
+}
+.innerBtn {
+    width: 33.3%;
+    padding: 0;
+    line-height: 1;
+    height: 100%;
+    padding: 30rpx 0 34rpx 0
+}
+.innerBtnValue {
+    font-size:60rpx;
+    font-family:BebasNeue;
+    color:rgba(0,0,0,1);
+}
+.innerBtnLabel {
+    margin-top: 11rpx;
+    font-size:24rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(136,136,136,1);
+}
+.inner2ndBtn {
+    margin-top: 21rpx;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+.halvingLine {
+    position: absolute;
+    left: 50%;
+    width:3rpx;
+    height:34rpx;
+    background-color: rgba(128,128,128,1);
+}
+.innerBtnIMG {
+    width: 42rpx;
+    height: 42rpx;
+}
+
+
+
+
+
+.contentBox {
+    padding-top: 20rpx;
+    min-height: 200rpx;
+    background-color: #fff;
+    width: 100%;
+}
+
+.functionCells {
+    background-color: #fff;
+    box-shadow: inset 0 -1px 0 0 rgba(232,232,232,1);
+    height: 110rpx;
+    margin: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.functionCells:last-child {
+    box-shadow: none;
+}
+.cellImage {
+    width: 40rpx;
+    height: 40rpx;
+}
+.cellLabel {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #353535;
+    margin-left: 30rpx
+}
+.cellValueLabel {
+    margin-right: 20rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+    color:rgba(255,61,75,1);
+}
+.detaileArrow {
+    width: 32rpx;
+    height: 32rpx;
+}

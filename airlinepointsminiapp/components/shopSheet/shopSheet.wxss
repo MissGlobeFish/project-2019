@@ -1,0 +1,104 @@
+/* components/shopSheet/shopSheet.wxss */
+.i-as{
+    position:fixed;
+    width:100%;
+    box-sizing:border-box;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+    transform:translate3d(0,100%,0);
+    transform-origin:center;
+    transition:all .2s ease-in-out;
+    z-index:900;
+    visibility:hidden
+}
+.i-as-show{
+    transform:translate3d(0,0,0);
+    visibility:visible
+}
+.i-as-mask{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,.7);
+    z-index:900;
+    transition:all .2s ease-in-out
+    ;opacity:0;
+    visibility:hidden
+}
+.i-as-mask-show{
+    opacity:1;
+    visibility:visible
+}
+.i-as-action-item{
+    position:relative;
+    background-color: #fff;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+}
+
+
+
+.cellBoder{
+    border-bottom: 1px solid rgba(232,232,232,1);
+}
+.payWayBox {
+    min-height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payIcon {
+    width: 40rpx;
+    height: 40rpx;
+}
+.payLabel {
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #353535;
+    margin-left: 30rpx;
+}
+
+
+.i-as-header{
+    background:#fff;
+    align-items: center;
+
+    /* text-align:center; */
+    position:relative;
+    /* font-size:12px;
+    color:#80848f */
+}
+
+.sheetHeader {
+    text-align: left;
+    width: 100%;
+    display: block;
+    font-size:32rpx;
+    padding-left: 40rpx;
+    line-height: 90rpx;
+    font-family:PingFangSC-Medium;
+    color:rgba(53,53,53,1);
+}
+.submit {
+    margin-top:10rpx
+}
+.submit-btn {
+    line-height: 1;
+    height: 100rpx;
+    background:linear-gradient(90deg,rgba(255,63,63,1) 0%,rgba(253,97,97,1) 100%);
+    box-shadow:0px 9px 21px 0px rgba(240,61,61,0.47);
+}
+.submit-btn-text{
+    display:inline-block;
+    line-height: 100rpx;
+    font-size:32rpx;
+    font-family:PingFangSC-Medium;
+    color:rgba(255,255,255,1);
+}
+
+@keyframes btn-spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}

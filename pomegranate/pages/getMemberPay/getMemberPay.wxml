@@ -1,0 +1,46 @@
+<!-- pages/getMemberPay/getMemberPay.wxml -->
+<scroll-view class="container">
+    <!-- 消费明细 -->
+    <view class="memberTypeBox" style="margin-top: 20rpx; padding-bottom: 0;">
+        <text class="typeBoxTitle">消费明细</text>
+        <view class="productListCell">
+            <text class="cellTitle">{{memberInfo.memberName}}卡1年</text>
+            <text class="cellValue">¥{{memberInfo.cardPrice}}</text>
+        </view>
+        <view wx:for="{{priceList}}" wx:for-item="priceIterm" wx:key="{{index}}" class="productListCell">
+            <text class="cellTitle">{{priceIterm.desc}}</text>
+            <text class="cellValue" style="color:rgba(255,61,75,1);font-family:PingFangSC-Medium;" >{{priceIterm.type == 0 ? '' : '-'}}¥{{priceIterm.value}}</text>
+        </view>
+    </view>
+    <view class="totalAmount">
+        <text class="totalText">合计</text>
+        <text class="totalAmountPrice">¥{{totalPrice}}</text>
+    </view>
+    <!-- 支付方式 -->
+    <view class="memberTypeBox" style="margin-top: 20rpx; padding-bottom: 0;">
+        <text class="typeBoxTitle">支付方式</text>
+        <!-- 微信支付 -->
+        <view class="chargeWayBox cellBoder" wx:if="{{ memberIndex != 2 }}" data-chargeWay="weChat" bind:tap="chargeWayBtnDidSelected">
+            <view style="display:flex">
+                <image class="chargeWayImage" src="/images/icon/getMember-wechatPay.png" />
+                <text class="chargeWayLab">微信支付</text>
+            </view>
+            <image class="chargeWayImage" src="{{chargeWay == 'weChat' ? '/images/icon/checked.png' : '/images/icon/uncheck.png'}}" />
+        </view>
+        <!-- 卡密支付 -->
+        <view class="chargeWayBox" data-chargeWay="card" bind:tap="chargeWayBtnDidSelected">
+            <view style="display:flex">
+                <image class="chargeWayImage" src="/images/icon/getMember-card.png" />
+                <text class="chargeWayLab">会员卡密</text>
+            </view>
+            <image class="chargeWayImage" src="{{chargeWay == 'card' ? '/images/icon/checked.png' : '/images/icon/uncheck.png'}}" />
+        </view>
+        <!-- 卡密输入框 -->
+        <view wx:if="{{chargeWay == 'card'}}" class="cardInputBox">
+            <form-input name="cardKey" constainorStyle="border-bottom: 1px solid #000; padding:30rpx 0rpx;" bind:inputValueDidChange="inputValueDidChanged" placeholder='请输入会员卡密'></form-input>
+        </view>
+    </view>
+    <button class="footer-bottom" hover-class="none" bind:tap="submitBtnDidTapped">
+        <text class="payLab">支付</text>
+    </button>
+</scroll-view>
